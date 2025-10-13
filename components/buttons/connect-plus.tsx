@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { PlusIcon } from "lucide-react";
 
-export default function ConnectPlus() {
+export default function ConnectPlus({className}:{className?: string}) {
   const pathname = usePathname();
 
   return (
@@ -16,10 +16,11 @@ export default function ConnectPlus() {
         pathname.includes("/connect-plus") ? "hidden" : "block",
         "flex items-center relative overflow-hidden",
         "cursor-pointer group",
-        "hover:scale-110 transition-all duration-300"
+        "hover:scale-110 transition-all duration-300",
+        className
       )}
     >
-      <span className="hidden md:block">Connect</span>
+      <span>Connect</span>
       <PlusIcon className="size-4 md:size-5"/>
       {/* ✅ Shimmer animation on hover */}
       <div

@@ -2,10 +2,11 @@
 import ConnectPlus from '@/components/buttons/connect-plus';
 import { LocaleToggler } from '@/components/togglers/LocaleToggler'
 import { ThemeToggler } from '@/components/togglers/ThemeToggler'
+import { cn } from '@/lib/utils';
 import { usePathname, useRouter } from 'next/navigation';
 import React from 'react'
 
-export default function ToggleActions() {
+export default function ToggleActions({className}:{className?: string}) {
     const pathname = usePathname();
     const router = useRouter();
 
@@ -19,8 +20,8 @@ export default function ToggleActions() {
         router.refresh()
     }
     return (
-        <div className='p-2 rounded-sm flex gap-0.5 md:gap-2 items-center'>
-            <ConnectPlus />
+        <div className={cn('rounded-sm flex gap-2 items-center', className)}>
+            <ConnectPlus className='hidden md:flex' />
             <ThemeToggler 
                variant='rectangle' 
                start='bottom-up'
