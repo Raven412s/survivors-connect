@@ -1,5 +1,31 @@
 {
+  "Navbar": {
+    "Logo": {
+      "Firm-Name-1": "सर्वाइवर",
+      "Firm-Name-2": "कनेक्ट"
+    },
+    "Link-Labels": {
+      "Home": "होम",
+      "About": "परिचय",
+      "Survivor-Voices": "पीड़ितों की आवाज़",
+      "Get-Involved": "शामिल हों",
+      "Contact-Us": "हमसे संपर्क करें",
+      "More": "अधिक",
+      "Events-And-Activities": "कार्यक्रम और गतिविधियाँ",
+      "Support-Services": "सहायता सेवाएँ",
+      "Research-And-Publications": "शोध और प्रकाशन",
+      "News-And-Media": "समाचार और मीडिया",
+      "Resources": "संसाधन",
+      "Donate-And-Support": "दान और समर्थन"
+    }
+  },
   "HomePage": {
-    "title": "Hello Hindi world!"
+    "Hero-Section": {
+      "Heading": "कनेक्ट",
+      "Tagline": {
+        "Line-1": "खामोशी से आवाज़ तक,",
+        "Line-2": "अकेलेपन से एकजुटता तक"
+      }
+    }
   }
 }

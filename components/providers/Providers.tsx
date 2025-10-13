@@ -14,7 +14,6 @@ export function Providers({ children, locale }: ProvidersProps) {
     <NextIntlClientProvider locale={locale}>
       <ReactLenis root className="w-full">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        
           {children}
         </ThemeProvider>
       </ReactLenis>

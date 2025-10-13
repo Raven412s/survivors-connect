@@ -1,5 +1,31 @@
 {
+  "Navbar":{
+    "Logo":{
+      "Firm-Name-1":"Survivor",
+      "Firm-Name-2":"Connect"
+    },
+    "Link-Labels":{
+      "Home": "Home",
+      "About":"About",
+      "Survivor-Voices":"Survivor Voices",
+      "Get-Involved":"Get Involved",
+      "Contact-Us":"Contact Us",
+      "More":"More",
+      "Events-And-Activities":"Events & Activities",
+      "Support-Services":"Support-Services",
+      "Research-And-Publications":"Research & publications",
+      "News-And-Media":"News & Media",
+      "Resources":"Resources",
+      "Donate-And-Support":"Donate & Support"
+    }
+  },
   "HomePage": {
-    "title": "Hello English world!"
+    "Hero-Section":{
+      "Heading":"Connect",
+      "Tagline":{
+        "Line-1":"From Silence to Voice,",
+        "Line-2":"From Isolation to Solidarity"
+      }
+    }
   }
 }
