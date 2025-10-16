@@ -10,7 +10,7 @@ import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import ToggleActions from "../action-blocks/navbar/ToggleActions";
-import { buttonVariants } from "../ui/button";
+import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 
 
@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <div
       className={cn(
-        "fixed top-2 md:top-0 inset-x-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-[60] bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
+        "sticky top-2 md:top-0 inset-x-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-[60] bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
       )}
       id="navbar"
     >
@@ -28,6 +28,7 @@ export default function Navbar() {
         <div className="flex items-center gap-1 md:gap-2">
           <div className="text-base md:text-xl font-bold p-1 flex gap-1 md:gap-2 items-center">
             <div className="size-7 md:size-10 border-3 md:border-4 border-foreground" />
+            {/* <div className="size-7 md:size-10 border-3 md:border-4 border-foreground absolute rotate-[45deg] scale-[60%]" /> */}
             <div className="flex flex-col items-start justify-center gap-0.5 md:gap-1">
               <h1 className="uppercase leading-tight">{t("Logo.Firm-Name-1")}</h1>
               <h1 className="uppercase leading-tight text-muted-foreground text-xs md:text-sm">
@@ -102,13 +103,12 @@ export default function Navbar() {
           <div className="flex md:hidden items-center">
             <Sheet>
               <SheetTrigger asChild>
-                <button
-                  className={cn(
-                    buttonVariants({ variant: "outline", size: "icon-sm" })
-                  )}
+                <Button
+                  variant="outline" 
+                  size="icon-sm"
                 >
                   <Menu className="size-4" />
-                </button>
+                </Button>
               </SheetTrigger>
 
               <SheetContent

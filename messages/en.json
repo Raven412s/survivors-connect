@@ -1,31 +1,88 @@
 {
-  "Navbar":{
-    "Logo":{
-      "Firm-Name-1":"Survivor",
-      "Firm-Name-2":"Connect"
+  "Navbar": {
+    "Logo": {
+      "Firm-Name-1": "Survivor",
+      "Firm-Name-2": "Connect"
     },
-    "Link-Labels":{
+    "Link-Labels": {
       "Home": "Home",
-      "About":"About",
-      "Survivor-Voices":"Survivor Voices",
-      "Get-Involved":"Get Involved",
-      "Contact-Us":"Contact Us",
-      "More":"More",
-      "Events-And-Activities":"Events & Activities",
-      "Support-Services":"Support-Services",
-      "Research-And-Publications":"Research & publications",
-      "News-And-Media":"News & Media",
-      "Resources":"Resources",
-      "Donate-And-Support":"Donate & Support"
+      "About": "About",
+      "Survivor-Voices": "Survivor Voices",
+      "Get-Involved": "Get Involved",
+      "Contact-Us": "Contact Us",
+      "More": "More",
+      "Events-And-Activities": "Events & Activities",
+      "Support-Services": "Support-Services",
+      "Research-And-Publications": "Research & publications",
+      "News-And-Media": "News & Media",
+      "Resources": "Resources",
+      "Donate-And-Support": "Donate & Support"
     }
   },
   "HomePage": {
-    "Hero-Section":{
-      "Heading":"Connect",
-      "Tagline":{
-        "Line-1":"From Silence to Voice,",
-        "Line-2":"From Isolation to Solidarity"
+    "Hero-Section": {
+      "Heading": "Connect +",
+      "Tagline": {
+        "Line-1": "From Silence to Voice,",
+        "Line-2": "From Isolation to Solidarity"
+      },
+      "Get-Started-Btn": "Get Started",
+      "Learn-More-Btn": "Learn More"
+    },
+    "Introduction-Section": {
+      "Mission-Badge": "Our Mission",
+      "Title": "About <1>SurvivorConnect</1> & JMN",
+      "Description": "Empowering victims through advocacy, technology, and solidarity. Building bridges from silence to voice, from isolation to community.",
+      "JMN": {
+        "Title": "Jan Mitra Nyas (JMN)",
+        "Description-1": "<1>Jan Mitra Nyas (JMN)</1> is an organization established in 1999 that focuses on ensuring basic rights for marginalized groups in Indian society, including women, children, Dalits, and tribal communities.",
+        "Description-2": "JMN works to establish the rule of law through participatory activism, combating issues like police torture, extrajudicial killing, bonded labour, and injustice rooted in the caste system.",
+        "Description-3": "JMN implements the project titled <1>\"Empowering Victims of Torture by Strengthening victim support and building information bridges.\"</1> This project operates primarily in Varanasi, Uttar Pradesh, and also covers Koderma, Jharkhand.",
+        "Key-Facts": {
+          "Title": "Key Achievements & Impact",
+          "Fact-1": "Over <1>two decades</1> of grassroots experience with victims of torture and caste-based discrimination",
+          "Fact-2": "Uses interventions like <1>Testimonial Therapy</1> and <1>Meta-legal Interventions</1>",
+          "Fact-3": "Handled <1>927 cases</1> between 2017 and August 2024",
+          "Fact-4": "Facilitated over <1>₹95.5 million</1> in compensation to survivors",
+          "Fact-5": "Led by <1>Shruti Nagvanshi</1> and <1>Lenin Raghuvanshi</1>"
+        }
+      },
+      "Connect-Plus": {
+        "Title": "Connect+ Platform",
+        "Description": "<1>Connect+</1> is an innovative ICT-based platform developed as part of JMN's victim empowerment project, serving as an online peer learning community and strengthening victim support through technology.",
+        "Features": {
+          "Safe-Space": {
+            "Title": "Safe Space & Networking",
+            "Description": "Secure platform for sharing stories and connecting with professionals"
+          },
+          "Resource-Hub": {
+            "Title": "Resource Hub",
+            "Description": "Legal rights, mental health services, and government schemes"
+          }
+        },
+        "Current-Impact": "<1>Current Impact:</1> <3>42 survivors</3> received online counselling, <5>47 survivors</5> trained for beta testing. Official launch targeted for <7>August 15, 2025</7>.",
+        "Vision": {
+          "Title": "Platform Vision",
+          "Quote": "\"A bridge from silence to voice, from isolation to solidarity.\"",
+          "Description": "Connect+ enables evidence-based collaboration among support services and will remain active beyond project support as an ongoing hub for collaboration and capacity building."
+        },
+        "Status": {
+          "Development": "Active Development",
+          "Beta-Testing": "Beta Testing",
+          "Launch": "Launch 2025"
+        }
       }
+    },
+    "Impact-Section": {
+      "Title": "Our Impact",
+      "Description": "Transforming lives through dedicated support and innovative solutions",
+      "Stats": {
+        "Cases-Handled": "Cases Handled",
+        "Compensation": "Compensation Facilitated",
+        "Survivors-Counselled": "Survivors Counselled",
+        "Beta-Testers": "Beta Testers Trained"
+      },
+      "Join-Button": "Join Our Mission"
     }
   }
 }

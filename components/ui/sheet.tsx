@@ -40,6 +40,7 @@ function SheetOverlay({
         className
       )}
       {...props}
+      data-lenis-prevent
     />
   )
 }
