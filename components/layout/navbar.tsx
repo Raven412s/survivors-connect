@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <div
       className={cn(
-        "sticky top-2 md:top-0 inset-x-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-[60] bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
+        "sticky top-2 md:top-0 md:m-0 m-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-[60] bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
       )}
       id="navbar"
     >

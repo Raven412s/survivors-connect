@@ -24,7 +24,7 @@ export default function IntroductionSection({ className }: { className?: string 
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
             {t.rich('Title', {
-              1: (chunks) => <span className="text-primary">{chunks}</span>
+              survivor: (chunks) => <span className="text-primary">{chunks}</span>
             })}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -45,7 +45,7 @@ export default function IntroductionSection({ className }: { className?: string 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p className="text-lg">
                 {t.rich('JMN.Description-1', {
-                  1: (chunks) => <strong className="text-foreground">{chunks}</strong>
+                  survivor: (chunks) => <strong className="text-foreground">{chunks}</strong>
                 })}
               </p>
               <p>
@@ -53,7 +53,7 @@ export default function IntroductionSection({ className }: { className?: string 
               </p>
               <p>
                 {t.rich('JMN.Description-3', {
-                  1: (chunks) => <em className="text-foreground font-medium">{chunks}</em>
+                  survivor: (chunks) => <em className="text-foreground font-medium">{chunks}</em>
                 })}
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-1', {
-                    1: (chunks) => <strong>{chunks}</strong>
+                    survivor: (chunks) => <strong>{chunks}</strong>
                   })}
                 </span>
               </li>
@@ -78,7 +78,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-2', {
-                    1: (chunks) => <em>{chunks}</em>
+                    survivor: (chunks) => <em>{chunks}</em>
                   })}
                 </span>
               </li>
@@ -86,7 +86,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-3', {
-                    1: (chunks) => <strong>{chunks}</strong>
+                    survivor: (chunks) => <strong>{chunks}</strong>
                   })}
                 </span>
               </li>
@@ -94,7 +94,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-4', {
-                    1: (chunks) => <strong>{chunks}</strong>
+                    survivor: (chunks) => <strong>{chunks}</strong>
                   })}
                 </span>
               </li>
@@ -102,7 +102,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-5', {
-                    1: (chunks) => <strong>{chunks}</strong>
+                    survivor: (chunks) => <strong>{chunks}</strong>
                   })}
                 </span>
               </li>
@@ -123,7 +123,7 @@ export default function IntroductionSection({ className }: { className?: string 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p className="text-lg">
                 {t.rich('Connect-Plus.Description', {
-                  1: (chunks) => <strong className="text-foreground">{chunks}</strong>
+                  survivor: (chunks) => <strong className="text-foreground">{chunks}</strong>
                 })}
               </p>
               
@@ -149,10 +149,10 @@ export default function IntroductionSection({ className }: { className?: string 
               <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
                 <p className="text-sm">
                   {t.rich('Connect-Plus.Current-Impact', {
-                    1: (chunks) => <strong>{chunks}</strong>,
-                    3: (chunks) => <strong>{chunks}</strong>,
-                    5: (chunks) => <strong>{chunks}</strong>,
-                    7: (chunks) => <strong>{chunks}</strong>
+                    survivor: (chunks) => <strong>{chunks}</strong>,
+                    s3: (chunks) => <strong>{chunks}</strong>,
+                    s5: (chunks) => <strong>{chunks}</strong>,
+                    s7: (chunks) => <strong>{chunks}</strong>
                   })}
                 </p>
               </div>

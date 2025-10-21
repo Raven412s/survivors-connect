@@ -6,8 +6,8 @@
 - [x] Implement **Theme Provider** (light/dark mode)
 - [x] Setup **ReactLenis** for smooth scrolling
 - [ ] Setup **NextAuth/Auth.js v5** for authentication (admin + survivor) ❌ //dropped
-- [ ] Integrate **MongoDB** (encrypted testimonies)
-- [ ] Integrate **Cloudinary** for media storage (images/audio/video)
+- [x] Integrate **MongoDB** (encrypted testimonies)
+- [x] Integrate **Cloudinary** for media storage (images/audio/video)
 - [x] Create **Providers wrapper** (Intl, Theme, Lenis)
 - [ ] Add **Safe Exit button** (redirects to neutral page quickly)
 - [ ] Implement **Mobile-first responsive layout**
@@ -16,9 +16,9 @@
 ---
 
 ## 2. Homepage
-- [ ] Build **Hero banner** with tagline
-- [ ] Section: Short intro about SurvivorConnect & JMN
-- [ ] Quick links (Get Help | Share Testimony | Join Community)
+- [x] Build **Hero banner** with tagline
+- [x] Section: Short intro about SurvivorConnect & JMN
+- [x] Quick links (Get Help | Share Testimony | Join Community)
 - [ ] News/Updates carousel (events, blogs, survivor stories)
 
 ---
