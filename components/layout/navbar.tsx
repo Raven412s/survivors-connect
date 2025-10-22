@@ -16,10 +16,11 @@ import { Separator } from "../ui/separator";
 
 export default function Navbar() {
   const t = useTranslations('Navbar')
+  const tLinks = useTranslations("Link-Labels");
   return (
     <div
       className={cn(
-        "sticky top-2 md:top-0 md:m-0 m-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-[60] bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
+        "sticky top-2 md:top-0 md:m-0 m-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-60 bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
       )}
       id="navbar"
     >
@@ -41,11 +42,11 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center justify-evenly px-2.5 h-full gap-5">
           {[
-            { href: "/", label: `${t("Link-Labels.Home")}` },
-            { href: "/about", label: `${t("Link-Labels.About")}` },
-            { href: "/survivor-voices", label: `${t("Link-Labels.Survivor-Voices")}` },
-            { href: "/get-involved", label: `${t("Link-Labels.Get-Involved")}` },
-            { href: "/contact-us", label: `${t("Link-Labels.Contact-Us")}` },
+            { href: "/", label: `${tLinks("Home")}` },
+            { href: "/about", label: `${tLinks("About")}` },
+            { href: "/survivor-voices", label: `${tLinks("Survivor-Voices")}` },
+            { href: "/get-involved", label: `${tLinks("Get-Involved")}` },
+            { href: "/contact-us", label: `${tLinks("Contact-Us")}` },
           ].map((link) => (
             <Link
               key={link.href}
@@ -58,7 +59,7 @@ export default function Navbar() {
           ))}
           <Sheet>
             <SheetTrigger>
-              {t("Link-Labels.More")}
+              {tLinks("More")}
             </SheetTrigger>
 
             <SheetContent
@@ -71,17 +72,17 @@ export default function Navbar() {
               <Separator />
               <div className="flex h-full w-full flex-col gap-3 items-center justify-start px-4">
                 {[
-                  { href: "/", label: `${t("Link-Labels.Home")}` },
-                  { href: "/about", label: `${t("Link-Labels.About")}` },
-                  { href: "/survivor-voices", label: `${t("Link-Labels.Survivor-Voices")}` },
-                  { href: "/get-involved", label: `${t("Link-Labels.Get-Involved")}` },
-                  { href: "/contact-us", label: `${t("Link-Labels.Contact-Us")}` },
-                  { href: "/events-activities", label: `${t("Link-Labels.Events-And-Activities")}` },
-                  { href: "/support-services", label: `${t("Link-Labels.Support-Services")}` },
-                  { href: "/research-publications", label: `${t("Link-Labels.Research-And-Publications")}` },
-                  { href: "/news-media", label: `${t("Link-Labels.News-And-Media")}` },
-                  { href: "/resources", label: `${t("Link-Labels.Resources")}` },
-                  { href: "/donate-support", label: `${t("Link-Labels.Donate-And-Support")}` },
+                  { href: "/", label: `${tLinks("Home")}` },
+                  { href: "/about", label: `${tLinks("About")}` },
+                  { href: "/survivor-voices", label: `${tLinks("Survivor-Voices")}` },
+                  { href: "/get-involved", label: `${tLinks("Get-Involved")}` },
+                  { href: "/contact-us", label: `${tLinks("Contact-Us")}` },
+                  { href: "/events-activities", label: `${tLinks("Events-And-Activities")}` },
+                  { href: "/support-services", label: `${tLinks("Support-Services")}` },
+                  { href: "/research-publications", label: `${tLinks("Research-And-Publications")}` },
+                  { href: "/news-media", label: `${tLinks("News-And-Media")}` },
+                  { href: "/resources", label: `${tLinks("Resources")}` },
+                  { href: "/donate-support", label: `${tLinks("Donate-And-Support")}` },
                 ].map((link) => (
                   <Link
                     key={link.href}
@@ -122,17 +123,17 @@ export default function Navbar() {
                 <Separator />
                 <div className="flex h-full w-full flex-col gap-3 items-center justify-start px-4">
                   {[
-                    { href: "/", label: `${t("Link-Labels.Home")}` },
-                    { href: "/about", label: `${t("Link-Labels.About")}` },
-                    { href: "/survivor-voices", label: `${t("Link-Labels.Survivor-Voices")}` },
-                    { href: "/get-involved", label: `${t("Link-Labels.Get-Involved")}` },
-                    { href: "/contact-us", label: `${t("Link-Labels.Contact-Us")}` },
-                    { href: "/events-activities", label: `${t("Link-Labels.Events-And-Activities")}` },
-                    { href: "/support-services", label: `${t("Link-Labels.Support-Services")}` },
-                    { href: "/research-publications", label: `${t("Link-Labels.Research-And-Publications")}` },
-                    { href: "/news-media", label: `${t("Link-Labels.News-And-Media")}` },
-                    { href: "/resources", label: `${t("Link-Labels.Resources")}` },
-                    { href: "/donate-support", label: `${t("Link-Labels.Donate-And-Support")}` },
+                    { href: "/", label: `${tLinks("Home")}` },
+                    { href: "/about", label: `${tLinks("About")}` },
+                    { href: "/survivor-voices", label: `${tLinks("Survivor-Voices")}` },
+                    { href: "/get-involved", label: `${tLinks("Get-Involved")}` },
+                    { href: "/contact-us", label: `${tLinks("Contact-Us")}` },
+                    { href: "/events-activities", label: `${tLinks("Events-And-Activities")}` },
+                    { href: "/support-services", label: `${tLinks("Support-Services")}` },
+                    { href: "/research-publications", label: `${tLinks("Research-And-Publications")}` },
+                    { href: "/news-media", label: `${tLinks("News-And-Media")}` },
+                    { href: "/resources", label: `${tLinks("Resources")}` },
+                    { href: "/donate-support", label: `${tLinks("Donate-And-Support")}` },
                   ].map((link) => (
                     <Link
                       key={link.href}

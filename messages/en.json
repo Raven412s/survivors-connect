@@ -1,24 +1,45 @@
 {
+  "Link-Labels": {
+    "Home": "Home",
+    "About": "About",
+    "Survivor-Voices": "Survivor Voices",
+    "Get-Involved": "Get Involved",
+    "Contact-Us": "Contact Us",
+    "More": "More",
+    "Events-And-Activities": "Events & Activities",
+    "Support-Services": "Support-Services",
+    "Research-And-Publications": "Research & publications",
+    "News-And-Media": "News & Media",
+    "Resources": "Resources",
+    "Donate-And-Support": "Donate & Support"
+  },
   "Navbar": {
     "Logo": {
       "Firm-Name-1": "Survivor",
       "Firm-Name-2": "Connect"
     },
-    "Link-Labels": {
-      "Home": "Home",
-      "About": "About",
-      "Survivor-Voices": "Survivor Voices",
-      "Get-Involved": "Get Involved",
-      "Contact-Us": "Contact Us",
-      "More": "More",
-      "Events-And-Activities": "Events & Activities",
-      "Support-Services": "Support-Services",
-      "Research-And-Publications": "Research & publications",
-      "News-And-Media": "News & Media",
-      "Resources": "Resources",
-      "Donate-And-Support": "Donate & Support"
-    },
-    "Connect_Plus_Button":"Connect"
+    "Connect_Plus_Button": "Connect"
+  },
+  "Footer": {
+    "Description": "A safe and supportive platform connecting survivors with resources, community, and opportunities for healing and empowerment.",
+    "Quick-Links": "Quick Links",
+    "More": "More",
+    "Stay-Connected": "Stay Connected",
+    "Newsletter-Description": "Get updates on events, resources, and support services.",
+    "Email-Placeholder": "Your email",
+    "Subscribe": "Subscribe",
+    "Follow-Us": "Follow Us",
+    "Emergency-Helpline": "Emergency Helpline",
+    "Email": "Email",
+    "Address": "Address",
+    "Address-Line": "123 Support Street, Hope City, HC 12345",
+    "All-Rights-Reserved": "All rights reserved.",
+    "Privacy-Policy": "Privacy Policy",
+    "Terms-of-Service": "Terms of Service",
+    "Accessibility": "Accessibility",
+    "Safe-Exit": "Safe Exit",
+    "Made-With": "Made with",
+    "For-Survivors": "for survivors"
   },
   "HomePage": {
     "Hero-Section": {
@@ -29,7 +50,7 @@
       },
       "Get-Help-Btn": "Get Help",
       "Share-Testimony-Btn": "Share Testimony",
-      "Join-Community-Btn":"Join Community"
+      "Join-Community-Btn": "Join Community"
     },
     "Introduction-Section": {
       "Mission-Badge": "Our Mission",
@@ -85,6 +106,826 @@
         "Beta-Testers": "Beta Testers Trained"
       },
       "Join-Button": "Join Our Mission"
+    }
+  },
+  "AboutPage": {
+    "OrganizationProfile": {
+      "Badge": "Organization Profile",
+      "Title": "About <organization>Jan Mitra Nyas (JMN)</organization>",
+      "Description": "A trusted human rights organization established in 1999, working tirelessly to ensure basic rights for marginalized communities in India.",
+      "Contact-Title": "Contact Information",
+      "Address": "Address",
+      "Full-Address": "SA 4/2 A, Daulatpur, Varanasi-221002, UP, India",
+      "Phone": "Phone",
+      "Email": "Primary Email",
+      "Email-Alt": "Alternative Email",
+      "Websites-Title": "Our Websites & Resources",
+      "Financial-Title": "Financial Overview",
+      "Annual-Budget": "Annual Budget",
+      "Donation-Status": "Donation Status",
+      "Established": "Established",
+      "Geographic-Title": "Geographic Context",
+      "Geographic-Description": "Varanasi is located 797 Km South East of New Delhi and 320 Km South East of Lucknow, the capital of Uttar Pradesh."
+    },
+    "MissionVision": {
+      "Mission-Title": "Our Mission",
+      "Mission-Description": "To provide basic rights to all, to eliminate situations that cause the exploitation of vulnerable and marginalized groups, and to start a movement for a people-friendly society through an inter-institutional approach.",
+      "Vision-Title": "Our Vision",
+      "Vision-Description": "To establish a true, vibrant, and fully entrenched democratic society through the Jan Mitra concept, where there shall be no violation of civil rights granted to a citizen by the state.",
+      "Leadership-Title": "Key Leadership",
+      "Leadership": {
+        "Managing-Trustee": "Managing Trustee",
+        "Founder-Advisor": "Founder & Senior Advisor",
+        "Board-Chair": "Board Chair"
+      },
+      "Board-Trustees": "Board of Trustees",
+      "Purpose-Title": "Establishment Purpose",
+      "Purpose-Description": "JMN works to ensure basic rights for marginalized groups in Indian society, including children, women, Dalits, and tribes. The organization aims to establish the rule of law through participatory activism against issues such as extrajudicial killing, police torture, hunger, bonded labour, and injustice by the caste system."
+    },
+     "ActivitiesImpact": {
+      "Badge": "Impact & Activities",
+      "Title": "Our Work & Impact",
+      "Description": "Over two decades of extensive work with victims of torture, police violence, and caste-based discrimination",
+      "Programs-Title": "Core Focus Areas",
+      "Programs": {
+        "Torture-Survivors": {
+          "Title": "Torture Survivor Support",
+          "Description": "Comprehensive program for survivors of torture and organized violence"
+        },
+        "Model-Villages": {
+          "Title": "Model Villages",
+          "Description": "Developing sustainable community models for marginalized populations"
+        },
+        "Women-Children": {
+          "Title": "Women & Children",
+          "Description": "Protection and empowerment programs for vulnerable women and children"
+        },
+        "Advocacy": {
+          "Title": "Advocacy & Campaign",
+          "Description": "National lobby, campaign and advocacy for policy change"
+        }
+      },
+      "Impact-Title": "Historical Impact (2017 - 2024)",
+      "Stats": {
+        "Testimonial-Interventions": "Testimonial Interventions",
+        "Meta-Legal-Interventions": "Meta Legal Interventions",
+        "Legal-Interventions": "Legal Interventions",
+        "Medical-Interventions": "Medical Interventions",
+        "Compensation": "Compensation Secured",
+        "Survivors-Supported": "Survivors Supported"
+      },
+      "Recent-Title": "Recent Activities (2023-2024)",
+      "Recent": {
+        "Activities": {
+          "Health-Workshops": {
+            "Title": "Health & Education",
+            "Description": "Conducted awareness workshops focusing on maternal and child health, benefitting over 1,500 women"
+          },
+          "Youth-Leadership": {
+            "Title": "Youth Leadership",
+            "Description": "Organized training programs for more than 500 young leaders in activism and human rights"
+          },
+          "Food-Security": {
+            "Title": "Food Security",
+            "Description": "Kitchen Gardening Initiative among 1,500 marginalized families, cultivating 10,000 quintals of organic vegetables"
+          },
+          "Child-Protection": {
+            "Title": "Child Protection",
+            "Description": "Successfully intervened and stopped over 10 cases of child marriage"
+          }
+        }
+      }
+    },
+    "CurrentProjects": {
+      "Badge": "Current Initiatives",
+      "Title": "Empowering Victims of Torture",
+      "Description": "Strengthening victim support and building information bridges through innovative technology",
+      "Project-Goal-Title": "Project Goal",
+      "Project-Goal-Description": "To empower victims of torture by significantly enhancing victim support services—including capacity building, psycho-social support, and legal assistance—by leveraging technology, research, and community-based solutions.",
+      "Components-Title": "Project Components",
+      "Components": {
+        "Online-Community": {
+          "Title": "Online Peer Learning Community",
+          "Description": "Developing the Connect+ ICT platform and conducting capacity-building programs"
+        },
+        "Trauma-Tools": {
+          "Title": "Trauma Management Tools",
+          "Description": "Facilitating institutional interventions and developing assessment tools"
+        },
+        "Testimonial-Therapy": {
+          "Title": "Testimonial Therapy",
+          "Description": "Offering trauma-informed psychosocial support and peer counseling"
+        },
+        "Research": {
+          "Title": "Research & Communication",
+          "Description": "Action-oriented research and strategic communication for policy impact"
+        }
+      },
+      "ConnectPlus": {
+        "Title": "Connect+ Platform",
+        "Description": "An ICT-based platform serving as a safe and accessible space for victims to share stories, seek guidance, and connect with professionals and peer support groups.",
+        "Vision": "A bridge from silence to voice, and from isolation to solidarity.",
+        "Features-Title": "Platform Features",
+        "Features": {
+          "Safe-Space": {
+            "Title": "Safe Space",
+            "Description": "Secure environment for survivors to share experiences and seek support"
+          },
+          "Peer-Support": {
+            "Title": "Peer Support",
+            "Description": "Connect with other survivors and professional support networks"
+          },
+          "Resource-Hub": {
+            "Title": "Resource Hub",
+            "Description": "Information on legal rights, mental health services, and government schemes"
+          },
+          "Technology": {
+            "Title": "Technology Bridge",
+            "Description": "Leveraging ICT to create survivor-centric support systems"
+          }
+        }
+      }
+    },
+    "NetworksAffiliations": {
+      "Badge": "Global Network",
+      "Title": "Networks & Affiliations",
+      "Description": "Collaborating with international organizations, grassroots NGOs, and human rights networks",
+      "Stats": {
+        "International-Partners": "International Partners",
+        "Grassroots-NGOs": "Grassroots NGOs",
+        "Years-Collaboration": "Years of Collaboration",
+        "Joint-Initiatives": "Joint Initiatives"
+      },
+      "Partnerships-Title": "Key Partnerships",
+      "Partnerships": {
+        "International": {
+          "Title": "International Organizations",
+          "Description": "Global human rights networks and rehabilitation councils"
+        },
+        "National": {
+          "Title": "National Networks",
+          "Description": "Indian alliances and coordination groups"
+        },
+        "Regional": {
+          "Title": "Regional Partnerships",
+          "Description": "Asian forums and local grassroots organizations"
+        }
+      },
+      "Collaboration-Impact": {
+        "Title": "Collaborative Impact",
+        "Description": "Through strategic partnerships, we amplify our impact, share best practices, and create a united front against human rights violations across South Asia and beyond."
+      }
+    }
+  },
+  "SurvivorVoicesPage": {
+    "Philosophy": {
+      "Badge": "Our Philosophy",
+      "Title": "Healing Through Testimony",
+      "Description": "We believe that sharing one's story is a profound act of empowerment and a critical step toward healing and justice.",
+      "Points": {
+        "Empowerment": {
+          "Title": "Empowerment through Narrative",
+          "Description": "Testimony Therapy allows survivors to narrate traumatic experiences in a structured, supportive environment for emotional healing."
+        },
+        "Dignity": {
+          "Title": "Restoration of Dignity",
+          "Description": "Survivors' narratives are documented and validated in the presence of trusted witnesses, empowering and healing through public validation."
+        },
+        "Solidarity": {
+          "Title": "From Silence to Solidarity",
+          "Description": "Survivor-centered methodology combining cultural, emotional, and human rights-based recovery strategies."
+        },
+        "Advocacy": {
+          "Title": "Advocacy Tool",
+          "Description": "Testimonials influence policy discussions and institutional reports to drive systemic change and accountability."
+        }
+      },
+      "ConnectPlus": {
+        "Title": "The Digital Voice: Connect+ Platform",
+        "Description": "An Interactive Communications Technology platform designed to safeguard and amplify survivor voices with digital security features.",
+        "Vision": "A bridge from silence to voice, from isolation to solidarity.",
+        "Features": {
+          "Title": "Key Features",
+          "SafeSpace": "Safe space to share stories and seek guidance",
+          "ResourceHub": "Resource hub for legal rights and mental health services",
+          "Security": "2FA, anonymous posting, and moderation tools",
+          "Support": "Connection with peer support groups and professionals"
+        }
+      }
+    },
+    "Testimonies": {
+      "Title": "Survivor Testimonies",
+      "Description": "Stories of courage, resilience, and healing from survivors who have broken their silence",
+      "SearchPlaceholder": "Search testimonies...",
+      "AllTypes": "All Types",
+      "Types": {
+        "Written": "Written",
+        "Audio": "Audio",
+        "Video": "Video"
+      },
+      "Anonymous": "Anonymous",
+      "Likes": "likes",
+      "Shares": "shares",
+      "NoTestimonies": "No testimonies match your search criteria"
+    },
+    "Reintegration": {
+      "Title": "Reintegration Stories",
+      "Description": "Narratives focusing on the process and challenges of survivors achieving reintegration into their communities",
+      "ChallengesTitle": "Common Challenges",
+      "StoriesTitle": "Reintegration Journeys",
+      "Challenges": {
+        "Community": {
+          "Title": "Community Reintegration",
+          "Description": "Rebuilding relationships and social standing within communities after trauma"
+        },
+        "Family": {
+          "Title": "Family Reconciliation",
+          "Description": "Healing family relationships affected by years of silence and stigma"
+        },
+        "Emotional": {
+          "Title": "Emotional Healing",
+          "Description": "Processing trauma and rebuilding self-worth and confidence"
+        },
+        "Support": {
+          "Title": "Support Systems",
+          "Description": "Accessing peer support, counseling, and community resources"
+        }
+      },
+          "Anonymous": "Anonymous"
+    },
+    "SuccessStories": {
+      "Title": "Success Stories",
+      "Description": "Accounts highlighting positive outcomes, healing journeys, and compensation victories",
+      "Stats": {
+        "Compensation": "Compensation Secured",
+        "Testimonies": "Testimonies Collected",
+        "Counselled": "Survivors Counselled",
+        "SurvivorsSupported": "Survivors Supported"
+      },
+      "CompensationAwarded": "Compensation Awarded",
+      "Likes": "likes",
+      "Shares": "shares"
+    },
+    "Impact": {
+      "Title": "Qualitative Impact",
+      "Description": "Feedback from survivors emphasizes the restorative power of sharing their stories",
+      "FeedbackTitle": "Therapeutic Impact",
+      "QuotesTitle": "Voices of Resilience",
+      "Feedback": {
+        "Emotional": {
+          "Title": "Emotional Relief",
+          "Description": "Survivors expressed reduced emotional burden and increased clarity after testimonial therapy"
+        },
+        "Dignity": {
+          "Title": "Restored Dignity",
+          "Description": "Compensation and recognition helped survivors feel humanized and respected"
+        },
+        "Community": {
+          "Title": "Breaking Isolation",
+          "Description": "Peer support groups provided safe community spaces, reducing feelings of loneliness"
+        }
+      },
+      "Quotes": {
+        "Quote1": "Sharing my story was the first time I felt truly heard. It gave me back my voice.",
+        "Quote2": "The compensation was important, but what mattered more was being believed and validated.",
+        "Quote3": "Through this community, I found the strength to stand up for myself and others."
+      }
+    },
+    "SubmitStory": {
+      "Badge": "Secure Submission",
+      "Title": "Share Your Story",
+      "Description": "Your voice matters. Share your experience securely and anonymously if you choose.",
+      "Security": {
+        "Title": "Security & Privacy",
+        "Encryption": "End-to-end encryption of all testimonies",
+        "TwoFactor": "Two-factor authentication for account security",
+        "Anonymous": "Anonymous posting options available",
+        "Moderation": "Content moderation for safety",
+        "ShowDetails": "Show security details",
+        "HideDetails": "Hide security details",
+        "DetailedInfo": "All submissions are encrypted using AES-256-GCM encryption. We use 2FA to protect survivor accounts and provide anonymous posting options. All content is moderated to ensure safety and compliance with our guidelines."
+      },
+      "Form": {
+        "StoryDetails": "Story Details",
+        "StoryType": "How would you like to share?",
+        "Types": {
+          "Written": "Written",
+          "Audio": "Audio",
+          "Video": "Video"
+        },
+        "Title": "Story Title",
+        "TitlePlaceholder": "Give your story a meaningful title...",
+        "Content": "Your Story",
+        "ContentPlaceholder": "Share your experience, journey, or message...",
+        "UploadMedia": "Upload Media",
+        "UploadHint": "Upload your audio or video file (max 100MB)",
+        "ChooseFile": "Choose File",
+        "PrivacySettings": "Privacy Settings",
+        "AnonymousPosting": "Post Anonymously",
+        "AnonymousDescription": "Your name and identifying details will not be published",
+        "Consent": "I understand that my story may be used for advocacy and support purposes, and I give my informed consent for its use in accordance with the privacy policy.",
+        "SubmitButton": "Submit Your Story Securely"
+      }
+    }
+  },
+   "GetInvolvedPage": {
+    "VisionMission": {
+      "Badge": "Our Purpose",
+      "Title": "Empowering Victims of Torture: Join Our Movement for Justice and Healing",
+      "Description": "Jan Mitra Nyas (JMN) works to ensure basic rights for marginalized groups and strives to establish the rule of law through participatory activism.",
+      "Vision": {
+        "Title": "Our Vision",
+        "Description": "To establish a true, vibrant, and fully entrenched democratic society where there is no violation of civil rights granted to a citizen by the state."
+      },
+      "ProjectGoal": {
+        "Title": "Project Goal",
+        "Description": "To empower victims of torture by significantly enhancing victim support services through capacity building, psycho-social support, and legal assistance using technology and community-based solutions."
+      },
+      "MissionTitle": "Our Mission",
+      "MissionPoints": {
+        "Rights": {
+          "Title": "Provide Basic Rights",
+          "Description": "To provide basic rights to all individuals regardless of their background or circumstances."
+        },
+        "Eliminate": {
+          "Title": "Eliminate Exploitation",
+          "Description": "To eliminate situations that lead to the exploitation of vulnerable and marginalized groups."
+        },
+        "Movement": {
+          "Title": "Start a Movement",
+          "Description": "To start a movement for a people-friendly society through an inter-institutional approach."
+        },
+        "Democracy": {
+          "Title": "Establish Democracy",
+          "Description": "To establish a vibrant democratic society where civil rights are protected and respected."
+        }
+      }
+    },
+    "ProfessionalPartners": {
+      "Title": "Become a Professional Partner via Connect+",
+      "Description": "Join our network of committed professionals working to support survivors through our innovative ICT platform.",
+      "ConnectPlus": {
+        "Title": "Connect+ Platform",
+        "Description": "An ICT platform designed to foster networking, knowledge-sharing, and mutual support among survivors, human rights defenders, and stakeholders.",
+        "Vision": "A bridge from silence to voice, and from isolation to solidarity."
+      },
+      "CurrentExperts": {
+        "Title": "Current Expert Network",
+        "Lawyers": "Legal Professionals & Advocates",
+        "MentalHealth": "Mental Health Counselors",
+        "SocialWorkers": "Social Workers & Case Managers"
+      },
+      "RolesTitle": "How You Can Contribute",
+      "Roles": {
+        "ExpertGuidance": {
+          "Title": "Contribute Expert Guidance",
+          "Description": "Provide expert support and guidance to survivors through our secure online platform."
+        },
+        "JoinNetwork": {
+          "Title": "Join Our Network",
+          "Description": "Become one of our dedicated counselors, lawyers, and professional staff committed to supporting victims."
+        },
+        "ExpandNetwork": {
+          "Title": "Expand the Network",
+          "Description": "Help us connect with additional Civil Society Organizations to create a larger network of victim support services."
+        }
+      },
+      "JoinButton": "Join Our Professional Network"
+    },
+    "LegalAdvocacy": {
+      "Title": "Support Legal and Meta-Legal Advocacy",
+      "Description": "Collaborate with us to ensure victims receive justice through legal interventions and public advocacy.",
+      "AreasTitle": "Advocacy Areas",
+      "Areas": {
+        "BreakSilence": {
+          "Title": "Help Break the Silence",
+          "Description": "Support our efforts to document and publicly share survivor cases through blogs, media reports, and video documentation."
+        },
+        "AmplifyCases": {
+          "Title": "Amplify Key Cases",
+          "Description": "Help circulate public interest blogs and videos created to amplify important human rights cases."
+        },
+        "YouthEngagement": {
+          "Title": "Youth Engagement",
+          "Description": "Support our Youth Leadership Development Program training young leaders in activism and community advocacy."
+        }
+      },
+      "KeyCasesTitle": "Key Cases to Amplify",
+      "KeyCases": {
+        "CustodyToCoffin": "From Custody to Coffin",
+        "LibertyDenied": "Liberty Denied",
+        "StationHouseOfficer": "The Station House Officer said..."
+      },
+      "KeyCasesDescription": "These cases represent critical human rights violations that need public awareness and support.",
+      "YouthProgram": {
+        "Title": "Youth Leadership Program",
+        "YoungLeaders": "Young Leaders Trained",
+        "SurvivorsCounselled": "Survivors Counselled"
+      }
+    },
+    "KnowledgeResearch": {
+      "Title": "Engage with Our Knowledge and Research",
+      "Description": "Access and share our research, publications, and communication materials designed to inform policy and enhance practice.",
+      "ProductsTitle": "Knowledge Products",
+      "Products": {
+        "PublicBlogs": {
+          "Title": "Public Blogs & Reports",
+          "Description": "Open-access tools for training, advocacy, and public education on human rights issues."
+        },
+        "Testimonials": {
+          "Title": "Survivor Testimonials",
+          "Description": "Documented survivor stories and case studies that serve as powerful advocacy tools."
+        },
+        "ResearchPapers": {
+          "Title": "Research Papers",
+          "Description": "Policy-oriented research and analysis on torture prevention and victim support."
+        }
+      },
+      "FeaturedPublicationsTitle": "Featured Publications",
+      "FeaturedPublications": {
+        "HealingHonour": "Healing through Honour: A Ceremony of Truth, Tears, and Testimony",
+        "TortureFreeSociety": "Towards a Torture-Free Society: A Call for Justice, Humanity, and Reform"
+      },
+      "ShareKnowledgeButton": "Share Our Knowledge",
+      "Recognition": {
+        "Title": "Recent Recognition",
+        "Description": "On 6 July 2025, JMN was honored during the DainikJagran-Inext Health Icon Awards 2025 for excellence in integrating justice and public health.",
+        "GlobalReport": "PVCHR's community-based survivor model featured in IRCT Global Evaluation Report on Livelihoods for Survivors of Torture (2022–2024)."
+      }
+    },
+    "VolunteerInternship": {
+      "Title": "Volunteer & Internship Opportunities",
+      "Description": "Join our team through various engagement opportunities designed for different levels of commitment and expertise.",
+      "Opportunities": {
+        "Volunteer": {
+          "Title": "General Volunteering",
+          "Description": "Support our day-to-day operations, community outreach, and awareness campaigns.",
+          "Duration": "Flexible duration",
+          "Commitment": "Part-time or project-based"
+        },
+        "Internship": {
+          "Title": "Internship Program",
+          "Description": "Gain hands-on experience in human rights work, research, and community development.",
+          "Duration": "3-6 months",
+          "Commitment": "Full-time or part-time"
+        },
+        "YouthAmbassador": {
+          "Title": "Youth Ambassador",
+          "Description": "Represent our organization in your community and educational institutions.",
+          "Duration": "1 year minimum",
+          "Commitment": "Campus and community engagement"
+        }
+      },
+      "ApplyButton": "Apply Now",
+      "AdditionalInfo": {
+        "Title": "Make a Difference",
+        "Description": "Your involvement can create meaningful change in the lives of survivors and contribute to building a more just society."
+      }
+    },
+    "SurvivorLeadership": {
+      "Title": "Survivor Leadership Programs",
+      "Description": "Empower survivors to become leaders and advocates in their communities through specialized training and support programs.",
+      "ComponentsTitle": "Program Components",
+      "Components": {
+        "LeadershipDevelopment": {
+          "Title": "Leadership Development",
+          "Description": "Comprehensive training in leadership skills, public speaking, and community organizing."
+        },
+        "PeerMentorship": {
+          "Title": "Peer Mentorship",
+          "Description": "Opportunities for survivors to mentor and support other survivors in their healing journey."
+        },
+        "AdvocacyTraining": {
+          "Title": "Advocacy Training",
+          "Description": "Training in human rights advocacy, policy engagement, and legal awareness."
+        },
+        "CommunityBuilding": {
+          "Title": "Community Building",
+          "Description": "Initiatives to build supportive communities and networks for survivors."
+        }
+      },
+      "Impact": {
+        "Title": "Program Impact",
+        "SurvivorsTrained": "Survivors Trained",
+        "CommunityLeaders": "Community Leaders Emerged",
+        "Description": "Our leadership programs have transformed survivors into powerful advocates for change in their communities."
+      },
+      "CTATitle": "Ready to Lead?",
+      "CTADescription": "Join our survivor leadership program and become a voice for change in your community.",
+      "LearnMoreButton": "Learn More About Leadership Program"
+    },
+    "ContactResources": {
+      "Title": "Contact & Resources",
+      "Description": "Get in touch with us to learn more about our work and how you can get involved.",
+      "ContactTitle": "Contact Information",
+      "Contact": {
+        "Address": "Address",
+        "FullAddress": "SA 4/2 A, Daulatpur, Varanasi-221002, UP, India",
+        "Phone": "Phone",
+        "Email": "Email",
+        "AltEmail": "Alternative Email"
+      },
+      "LeadershipTitle": "Key Leadership",
+      "Leadership": {
+        "ProjectManager": "Project Manager (Interim)",
+        "ManagingTrustee": "Managing Trustee"
+      },
+      "WebsitesTitle": "Websites & Platforms",
+      "Websites": {
+        "JanMitraNyas": "Jan Mitra Nyas",
+        "PVCHR": "PVCHR Official Website",
+        "ConnectPlus": "Connect+ Project Website",
+        "PVCHRBlog": "PVCHR Blog",
+        "TestimonialHealing": "Testimonial Healing Blog",
+        "YouTube": "YouTube Channel"
+      },
+      "ProjectInfo": {
+        "Title": "Project Information",
+        "ProjectName": "Project Name",
+        "Name": "Empowering Victims of Torture by Strengthening victim support and building information bridges",
+        "Goal": "Project Goal",
+        "GoalDescription": "To empower victims of torture by strengthening support services through capacity building, psychosocial care, and legal assistance."
+      },
+      "Recognition": {
+        "Title": "Awards & Recognition",
+        "Description": "Recognized for excellence in integrating justice and public health approaches in victim support."
+      }
+    },
+     "Modals": {
+      "ProfessionalNetwork": {
+        "Title": "Join Our Professional Network",
+        "Form": {
+          "Name": "Full Name",
+          "NamePlaceholder": "Enter your full name",
+          "Email": "Email Address",
+          "EmailPlaceholder": "Enter your email",
+          "Profession": "Profession",
+          "ProfessionPlaceholder": "Select your profession",
+          "Expertise": "Area of Expertise",
+          "ExpertisePlaceholder": "e.g., Trauma counseling, Legal aid, etc.",
+          "Experience": "Years of Experience",
+          "ExperiencePlaceholder": "Number of years",
+          "Motivation": "Why do you want to join our network?",
+          "MotivationPlaceholder": "Tell us about your motivation and how you can contribute...",
+          "Submit": "Submit Application"
+        },
+        "Professions": {
+          "Lawyer": "Lawyer",
+          "MentalHealthCounselor": "Mental Health Counselor",
+          "SocialWorker": "Social Worker",
+          "MedicalProfessional": "Medical Professional",
+          "HumanRightsAdvocate": "Human Rights Advocate",
+          "AcademicResearcher": "Academic Researcher",
+          "CSORepresentative": "CSO Representative",
+          "Other": "Other"
+        }
+      },
+      "VolunteerApplication": {
+        "Title": "Apply for {opportunity}",
+        "Form": {
+          "Name": "Full Name",
+          "NamePlaceholder": "Enter your full name",
+          "Email": "Email Address",
+          "EmailPlaceholder": "Enter your email",
+          "Phone": "Phone Number",
+          "PhonePlaceholder": "Enter your phone number",
+          "Education": "Education Background",
+          "EducationPlaceholder": "Your educational qualifications",
+          "Experience": "Relevant Experience",
+          "ExperiencePlaceholder": "Describe any relevant experience or skills",
+          "Availability": "Availability",
+          "AvailabilityPlaceholder": "e.g., Weekends, 10-15 hours per week",
+          "Motivation": "Why are you interested in this opportunity?",
+          "MotivationPlaceholder": "Tell us about your motivation and what you hope to achieve...",
+          "Submit": "Submit Application"
+        }
+      },
+      "LeadershipProgram": {
+        "Title": "Survivor Leadership Program Details",
+        "Overview": {
+          "Title": "Program Overview",
+          "Description": "Our Survivor Leadership Program is designed to empower survivors of human rights violations to become advocates and leaders in their communities. This comprehensive 6-month program provides training, mentorship, and support to help survivors transform their experiences into powerful tools for change."
+        },
+        "Eligibility": {
+          "Title": "Eligibility Criteria",
+          "Items": [
+            "Survivors of human rights violations",
+            "Minimum 6 months since the traumatic experience",
+            "Willingness to participate in group activities",
+            "Commitment to complete the 6-month program"
+          ]
+        },
+        "Benefits": {
+          "Title": "Program Benefits",
+          "Items": [
+            "Comprehensive leadership training",
+            "Peer support network",
+            "Mentorship from experienced advocates",
+            "Stipend for program participation",
+            "Opportunity to represent the organization"
+          ]
+        },
+        "Timeline": {
+          "Title": "Program Timeline",
+          "Items": [
+            "Application Review: 2 weeks",
+            "Interview Process: 1 week",
+            "Program Orientation: 1 day",
+            "Training Phase: 3 months",
+            "Mentorship Phase: 3 months"
+          ]
+        },
+        "CTAText": "Ready to begin your leadership journey? Contact us to learn more about the application process.",
+        "ContactButton": "Contact Program Coordinator",
+        "DownloadButton": "Download Brochure"
+      }
+    }
+  },
+   "ContactUsPage": {
+    "OrganizationIdentity": {
+      "Badge": "Who We Are",
+      "Title": "Contact Jan Mitra Nyas & PVCHR",
+      "Description": "Reach out to us for support, partnerships, or to learn more about our work in human rights protection and survivor support.",
+      "AboutTitle": "About Our Organization",
+      "Points": {
+        "Marginalized": {
+          "Title": "Protecting Marginalized Communities",
+          "Description": "Jan Mitra Nyas works to ensure basic rights for children, women, Dalits, and tribal groups across India."
+        },
+        "Activism": {
+          "Title": "Participatory Activism",
+          "Description": "We combat systemic injustices through community-led activism against torture, extrajudicial killings, and caste discrimination."
+        },
+        "Mission": {
+          "Title": "Our Mission",
+          "Description": "To secure fundamental rights for all by eliminating conditions that enable exploitation of vulnerable groups through inter-institutional collaboration."
+        },
+        "Vision": {
+          "Title": "Our Vision",
+          "Description": "To foster a truly democratic society where civil rights are respected, protected, and never violated under the Jan Mitra concept."
+        }
+      },
+      "SupportStatement": {
+        "Title": "Statement of Support",
+        "Description": "Victim support is as vital as healthcare. We believe in comprehensive care for survivors of human rights violations.",
+        "Initiative": "Our project 'Empowering Victims of Torture' strengthens victim support through capacity building, psychosocial care, and legal assistance."
+      },
+      "FocusAreas": {
+        "Title": "Key Focus Areas",
+        "Capacity": "Capacity Building",
+        "Psychosocial": "Psychosocial Support",
+        "Legal": "Legal Assistance",
+        "Technology": "Technology Solutions"
+      }
+    },
+    "EmergencyHelp": {
+      "Title": "Emergency Help & Support",
+      "Description": "Immediate assistance available 24/7 for crisis situations and urgent support needs",
+      "Contacts": {
+        "Primary": "Primary Helpline",
+        "Secondary": "Secondary Helpline"
+      },
+      "Availability": {
+        "24x7": "Available 24/7"
+      },
+      "CallConfirmation": "You are about to call our emergency helpline. This will connect you directly to our support team. Continue?",
+      "AdditionalInfo": "What type of support can you expect?",
+      "SupportTypes": {
+        "Immediate": "Immediate Support",
+        "Crisis": "Crisis intervention and safety planning",
+        "Emergency": "Emergency counseling and guidance",
+        "Safety": "Safety and protection measures",
+        "FollowUp": "Follow-up Support",
+        "Counseling": "Professional counseling services",
+        "Legal": "Legal aid and assistance",
+        "Medical": "Medical and healthcare referrals"
+      },
+      "SafetyNotice": "All calls are confidential and handled with utmost care for your safety and privacy"
+    },
+    "OfficeDetails": {
+      "Title": "Our Office Locations",
+      "Description": "Find our main office and connect with our team through multiple channels",
+      "Offices": {
+        "Head": {
+          "Title": "Head Office - Varanasi",
+          "Address": "SA 4/2 A, Daulatpur, Varanasi – 221002, Uttar Pradesh, India",
+          "Phone1": "Primary Contact",
+          "Phone2": "Secondary Contact"
+        }
+      },
+      "Address": "Office Address",
+      "PhoneNumbers": "Phone Numbers",
+      "EmailAddresses": "Email Addresses",
+      "RepresentativesTitle": "Key Representatives",
+      "Representatives": {
+        "ManagingTrustee": "Managing Trustee",
+        "FounderAdvisor": "Founder & Senior Advisor"
+      },
+      "OperatingHours": {
+        "Title": "Operating Hours",
+        "Weekdays": "Monday - Friday",
+        "Weekends": "Saturday - Sunday",
+        "Emergency": "Emergency Helpline"
+      }
+    },
+    "ContactForm": {
+      "Title": "Send Us a Message",
+      "Description": "Get in touch with us through our secure contact form. We typically respond within 24-48 hours.",
+      "Categories": {
+        "General": "General Inquiry",
+        "Support": "Survivor Support",
+        "Partnership": "Partnership Opportunity",
+        "Volunteer": "Volunteer Application",
+        "Media": "Media Inquiry",
+        "Other": "Other"
+      },
+      "Form": {
+        "Name": "Full Name",
+        "NamePlaceholder": "Enter your full name",
+        "Email": "Email Address",
+        "EmailPlaceholder": "Enter your email address",
+        "Phone": "Phone Number",
+        "PhonePlaceholder": "Enter your phone number",
+        "Category": "Inquiry Category",
+        "Subject": "Subject",
+        "SubjectPlaceholder": "Brief subject of your message",
+        "Message": "Your Message",
+        "MessagePlaceholder": "Please provide details about your inquiry, support needs, or how we can help you...",
+        "Urgent": "This is an urgent matter requiring immediate attention",
+        "FollowUp": "I agree to be contacted for follow-up if needed",
+        "Submitting": "Sending Message...",
+        "Submit": "Send Message",
+        "PrivacyNotice": "Your information is secure and will only be used to respond to your inquiry. We respect your privacy and maintain strict confidentiality."
+      },
+      "SuccessMessage": "Thank you for your message! We have received your inquiry and will respond within 24-48 hours.",
+      "ErrorMessage": "There was an error sending your message. Please try again or contact us directly via phone or email."
+    },
+    "DigitalResources": {
+      "Title": "Digital Platforms & Resources",
+      "Description": "Explore our online presence and access important documents and resources",
+      "WebsitesTitle": "Websites & Platforms",
+      "Websites": {
+        "JanMitraNyas": "Jan Mitra Nyas Official",
+        "JanMitraDescription": "Official website of Jan Mitra Nyas with organization updates and programs",
+        "PVCHR": "PVCHR Official Website",
+        "PVCHRDescription": "People's Vigilance Committee on Human Rights main website",
+        "ConnectPlus": "Connect+ Platform",
+        "ConnectPlusDescription": "Empower Survivor Project - ICT platform for survivor support",
+        "PVCHRBlog": "PVCHR Blog",
+        "PVCHRBlogDescription": "Latest updates, case studies, and human rights advocacy",
+        "TestimonialHealing": "Testimonial Healing Blog",
+        "TestimonialHealingDescription": "Survivor stories and testimonial therapy documentation",
+        "YouTube": "YouTube Channel",
+        "YouTubeDescription": "Video content, testimonials, and awareness campaigns"
+      },
+      "DocumentsTitle": "Documentation & Reports",
+      "Documents": {
+        "AnnualReport": "Annual Report 2023-2024",
+        "AnnualReportDescription": "Comprehensive overview of our activities, impact, and financial report",
+        "ReportsArchive": "Reports Archive",
+        "ReportsArchiveDescription": "Collection of previous annual reports and special publications"
+      },
+      "Download": "Download",
+      "AdditionalResources": {
+        "Title": "Additional Resources",
+        "Wikipedia": "Wikipedia page for background information",
+        "Research": "Research papers and publications",
+        "Publications": "Policy briefs and advocacy materials"
+      }
+    },
+    "CallToAction": {
+      "Title": "Join Our Movement for Justice",
+      "Description": "Together, we can create a world where human rights are protected and survivors find healing and justice",
+      "QuotesTitle": "Words of Hope & Solidarity",
+      "Quotes": {
+        "Injustice": "Injustice doesn't only affect those falsely accused — it thrives in the silent suffering of innocent hearts left unheard.",
+        "TortureFree": "Towards a Torture-Free Society: A Call for Justice, Humanity, and Reform.",
+        "ConnectPlus": "Connect+ is more than a platform — it's a bridge from silence to voice, from isolation to solidarity."
+      },
+      "ArchiveTitle": "Explore Survivor Stories",
+      "ArchiveDescription": "Read powerful testimonies and learn about Healing through Honour ceremonies that transform pain into empowerment",
+      "ExploreStories": "Explore Stories",
+      "CollaborationTitle": "Collaboration Opportunities",
+      "Collaboration": {
+        "Legal": {
+          "Title": "Legal Professionals",
+          "Description": "We welcome collaborations with lawyers and legal experts to strengthen our advocacy and provide better legal support to survivors."
+        },
+        "Advocacy": {
+          "Title": "Human Rights Advocates",
+          "Description": "Join our network of advocates working to combat systemic injustices and promote human rights at local and national levels."
+        },
+        "Support": {
+          "Title": "Support Professionals",
+          "Description": "Mental health professionals, counselors, and social workers can contribute to our comprehensive survivor support programs."
+        }
+      },
+      "CollaborationCTA": {
+        "Title": "Ready to Make a Difference?",
+        "Description": "Whether you're an individual, organization, or professional, there are many ways to collaborate with us in our mission.",
+        "PartnerButton": "Become a Partner",
+        "LearnMoreButton": "Learn More"
+      }
     }
   }
 }

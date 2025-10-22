@@ -24,10 +24,10 @@
 ---
 
 ## 3. About Page
-- [ ] Section: Who We Are (JMN, PVCHR, project background)
-- [ ] Section: Vision & Mission (survivor-centric support)
-- [ ] Section: Partners (IRCT, Gwangju HR Peace Foundation, etc.)
-- [ ] Section: Team (Shruti, Lenin, advisors, trustees)
+- [x] Section: Who We Are (JMN, PVCHR, project background)
+- [x] Section: Vision & Mission (survivor-centric support)
+- [x] Section: Partners (IRCT, Gwangju HR Peace Foundation, etc.)
+- [x] Section: Team (Shruti, Lenin, advisors, trustees)
 
 ---
 

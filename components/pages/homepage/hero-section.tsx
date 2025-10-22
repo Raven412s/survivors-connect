@@ -10,7 +10,7 @@ export default function HeroSection({ className }: { className?: string }) {
     return (
         <div className={cn("relative flex flex-col items-center justify-center min-h-[90vh] bg-background overflow-hidden", className)}>
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
+            <div className="absolute inset-0 bg-linear-to-br from-background via-background to-muted/20" />
 
             {/* Animated Gradient Blobs */}
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-300/50 rounded-full blur-3xl animate-pulse" />

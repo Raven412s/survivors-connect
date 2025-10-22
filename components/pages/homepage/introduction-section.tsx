@@ -11,7 +11,7 @@ export default function IntroductionSection({ className }: { className?: string 
   return (
     <section
       className={cn(
-        "w-full py-24 px-6 md:px-8 lg:px-16 bg-gradient-to-b from-background to-muted/20",
+        "w-full py-24 px-6 md:px-8 lg:px-16 bg-linear-to-b from-background to-muted/20",
         className
       )}
     >
@@ -67,7 +67,7 @@ export default function IntroductionSection({ className }: { className?: string 
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-1', {
                     survivor: (chunks) => <strong>{chunks}</strong>
@@ -75,7 +75,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-2', {
                     survivor: (chunks) => <em>{chunks}</em>
@@ -83,7 +83,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-3', {
                     survivor: (chunks) => <strong>{chunks}</strong>
@@ -91,7 +91,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-4', {
                     survivor: (chunks) => <strong>{chunks}</strong>
@@ -99,7 +99,7 @@ export default function IntroductionSection({ className }: { className?: string 
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 shrink-0" />
                 <span>
                   {t.rich('JMN.Key-Facts.Fact-5', {
                     survivor: (chunks) => <strong>{chunks}</strong>
@@ -160,7 +160,7 @@ export default function IntroductionSection({ className }: { className?: string 
           </div>
 
           {/* Platform Features Card */}
-          <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20 order-1 lg:order-2">
+          <div className="bg-linear-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20 order-1 lg:order-2">
             <h4 className="text-xl font-semibold text-foreground mb-6">
               {t('Connect-Plus.Vision.Title')}
             </h4>
