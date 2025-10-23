@@ -1,8 +1,4 @@
-"use client";
-import { useRouter } from "next/navigation";
-
 export default function Footer() {
-  const router = useRouter();
 
   const handleSafeExit = () => {
     // Option 1: External redirect (recommended)
