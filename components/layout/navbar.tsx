@@ -3,7 +3,8 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetTrigger
+  SheetTrigger,
+  SheetClose
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
@@ -84,14 +85,15 @@ export default function Navbar() {
                   { href: "/resources", label: `${tLinks("Resources")}` },
                   { href: "/donate-support", label: `${tLinks("Donate-And-Support")}` },
                 ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="relative inline-block cursor-pointer group text-lg font-medium"
-                  >
-                    <span className="relative z-10">{link.label}</span>
-                    <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
-                  </Link>
+                  <SheetClose asChild key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="relative inline-block cursor-pointer group text-lg font-medium"
+                    >
+                      <span className="relative z-10">{link.label}</span>
+                      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  </SheetClose>
                 ))}
               </div>
             </SheetContent>
@@ -135,14 +137,15 @@ export default function Navbar() {
                     { href: "/resources", label: `${tLinks("Resources")}` },
                     { href: "/donate-support", label: `${tLinks("Donate-And-Support")}` },
                   ].map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="relative inline-block cursor-pointer group text-lg font-medium"
-                    >
-                      <span className="relative z-10">{link.label}</span>
-                      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
-                    </Link>
+                    <SheetClose asChild key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="relative inline-block cursor-pointer group text-lg font-medium"
+                      >
+                        <span className="relative z-10">{link.label}</span>
+                        <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+                      </Link>
+                    </SheetClose>
                   ))}
                 </div>
               </SheetContent>

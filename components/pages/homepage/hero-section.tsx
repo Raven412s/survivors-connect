@@ -8,13 +8,9 @@ export default function HeroSection({ className }: { className?: string }) {
     const t = useTranslations('HomePage.Hero-Section');
 
     return (
-        <div className={cn("relative flex flex-col items-center justify-center min-h-[90vh] bg-background overflow-hidden", className)}>
+        <div className={cn("relative flex flex-col items-center justify-center min-h-[90vh]  overflow-hidden", className)}>
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-linear-to-br from-background via-background to-muted/20" />
-
-            {/* Animated Gradient Blobs */}
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-300/50 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300/50 rounded-full blur-3xl animate-pulse delay-1000" />
 
             <div className="relative z-10 flex flex-col items-center justify-center text-center mx-auto">
                 <div className="md:scale-200 flex flex-col items-center justify-start">
