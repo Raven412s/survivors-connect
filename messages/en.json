@@ -927,5 +927,298 @@
         "LearnMoreButton": "Learn More"
       }
     }
+  },
+   "EventsActivitiesPage": {
+    "ProjectOverview": {
+      "Badge": "Project Overview",
+      "Title": "Empowering Victims of Torture: Events & Activities",
+      "Description": "Tracking our journey in strengthening victim support through capacity building, psychosocial care, and legal assistance across Varanasi and Koderma.",
+      "Details": {
+        "Goal": {
+          "Title": "Project Goal",
+          "Description": "Empower victims of torture by enhancing support services through capacity building, psychosocial care, and legal assistance using technology and community solutions."
+        },
+        "Locations": {
+          "Title": "Project Locations",
+          "Description": "Operating in Varanasi, Uttar Pradesh and Koderma, Jharkhand to serve marginalized communities across both regions."
+        },
+        "Approach": {
+          "Title": "Our Approach",
+          "Description": "Leveraging technology, research, and community-based solutions for sustainable impact and holistic survivor recovery."
+        },
+        "Impact": {
+          "Title": "Expected Impact",
+          "Description": "Creating lasting change through comprehensive support systems that address both immediate needs and long-term rehabilitation."
+        }
+      },
+      "Timeline": {
+        "Title": "Project Timeline 2025",
+        "Start": "Project Start",
+        "MidPoint": "Platform Launch",
+        "Completion": "Project Completion"
+      }
+    },
+    "OngoingActivities": {
+      "Title": "Ongoing & Core Project Activities",
+      "Description": "Our comprehensive approach focuses on four main content areas to ensure holistic support for survivors.",
+      "Activities": {
+        "PeerSupport": {
+          "Title": "Peer Support & Capacity Building",
+          "Description": "Strengthening community networks and building survivor capacity through training and digital platforms.",
+          "ConnectPlus": "Development of interactive ICT platform Connect+",
+          "CapacityBuilding": "Comprehensive training sessions for victims",
+          "Counseling": "Trauma-informed counseling services"
+        },
+        "LegalEmpowerment": {
+          "Title": "Legal Empowerment & Tools",
+          "Description": "Ensuring justice through legal interventions and developing assessment tools for victim-centric services.",
+          "Interventions": "Collaboration with legal professionals",
+          "AssessmentTools": "Organizational and individual assessment tools",
+          "Advocacy": "Advocacy for compensation and legal redress"
+        },
+        "Psychosocial": {
+          "Title": "Psychosocial Rehabilitation",
+          "Description": "Helping victims process trauma and rebuild self-worth through therapeutic interventions.",
+          "Therapy": "Testimony therapy sessions",
+          "Counseling": "Peer and family counseling",
+          "Reintegration": "Community reintegration support"
+        },
+        "Knowledge": {
+          "Title": "Knowledge Generation",
+          "Description": "Conducting research and disseminating findings to improve victim support services globally.",
+          "Research": "Effectiveness studies of support services",
+          "Publications": "Academic and policy publications",
+          "Dissemination": "Workshops, webinars, and training manuals"
+        }
+      },
+      "KeyComponents": "Key Components",
+      "ConnectPlus": {
+        "Title": "Connect+ Platform Progress",
+        "Description": "Our ICT-based platform creating safe spaces for victims to share stories and access support.",
+        "SurvivorsOnboarded": "Survivors Onboarded",
+        "Professionals": "Professionals Network",
+        "Testimonies": "Testimonies Collected",
+        "PeerGroups": "Peer Support Groups"
+      }
+    },
+    "KeyAchievements": {
+      "Title": "Key Achievements & Events (January–July 2025)",
+      "Description": "Significant milestones and impactful activities achieved in the first half of 2025.",
+      "Categories": {
+        "Digital": "Digital & Peer Support",
+        "Training": "Training & Counseling",
+        "Legal": "Legal Interventions",
+        "Research": "Research & Communication"
+      },
+      "Achievements": {
+        "Digital": {
+          "PlatformWorkshop": {
+            "Title": "Platform Planning & Design Workshop",
+            "Description": "Workshop conducted with survivors, legal experts, and mental health professionals to design the Connect+ platform."
+          },
+          "SurvivorOnboarding": {
+            "Title": "Survivor Beta Onboarding",
+            "Description": "47 survivors from Dalit, Muslim, and Adivasi communities trained and onboarded onto Connect+ platform."
+          },
+          "ProfessionalNetwork": {
+            "Title": "Professional Network Creation",
+            "Description": "14 professionals including lawyers, counselors, and social workers onboarded to provide expert support."
+          },
+          "PilotTesting": {
+            "Title": "Pilot Testing Sessions",
+            "Description": "Two pilot test sessions conducted with 20 survivors, gathering valuable feedback for platform improvement."
+          }
+        },
+        "Training": {
+          "TraumaFirstAid": {
+            "Title": "Staff Training on Trauma-First Aid",
+            "Description": "Workshop conducted for field staff and health workers on trauma-first aid, active listening, and empathetic care."
+          },
+          "AssessmentTools": {
+            "Title": "Staff Training on Assessment Tools",
+            "Description": "Capacity-building session for frontline workers on ethical interviewing and data protection protocols."
+          },
+          "StructuredSessions": {
+            "Title": "Structured Training Sessions",
+            "Description": "Four comprehensive training sessions held in Varanasi and Sonbhadra for survivor leaders and support staff."
+          },
+          "TestimonialTherapy": {
+            "Title": "Testimonial Therapy Sessions",
+            "Description": "70 structured testimonial therapy sessions facilitated in safe community spaces across multiple locations."
+          }
+        },
+        "Legal": {
+          "TotalInterventions": {
+            "Title": "Total Legal Interventions",
+            "Description": "85 legal and meta-legal interventions made on behalf of survivors of torture and human rights violations."
+          },
+          "Compensation": {
+            "Title": "Financial Redressal Achieved",
+            "Description": "NHRC recommended and facilitated ₹4.1 million in compensation for 9 survivor cases of custodial torture."
+          },
+          "CrisisResponse": {
+            "Title": "Crisis Response Success",
+            "Description": "Emergency intervention protected 1.5 hectares of tribal farmland for Ghasia Adivasi community in Sonbhadra."
+          },
+          "PublicAdvocacy": {
+            "Title": "Public Advocacy Cases",
+            "Description": "6 major survivor cases publicly shared through blogs and videos to raise awareness and seek justice."
+          }
+        },
+        "Research": {
+          "IRCTReport": {
+            "Title": "IRCT Global Evaluation Report",
+            "Description": "PVCHR featured in International Rehabilitation Council for Torture Victims global report on livelihoods for survivors."
+          },
+          "TortureFreeSociety": {
+            "Title": "Towards a Torture-Free Society",
+            "Description": "Published blog article calling for justice, humanity, and reform in torture prevention efforts."
+          },
+          "HealthAwards": {
+            "Title": "Health Icon Awards 2025",
+            "Description": "Jan Mitra Nyas honored for excellence in integrating justice and public health approaches."
+          },
+          "FieldDocumentation": {
+            "Title": "Field Documentation",
+            "Description": "Over 12 field-based blogs and survivor stories published on caste violence and police torture issues."
+          }
+        }
+      },
+      "ImpactStats": {
+        "Title": "Cumulative Impact (2017-2025)",
+        "TestimonialInterventions": "Testimonial Interventions",
+        "Compensation": "Compensation Secured",
+        "SurvivorsSupported": "Survivors Supported",
+        "TherapySessions": "Therapy Sessions"
+      }
+    },
+    "WorkshopsWebinars": {
+      "Title": "Workshops & Webinars",
+      "Description": "Educational initiatives focusing on digital literacy, trauma care, and survivor rights awareness.",
+      "UpcomingTitle": "Upcoming Workshops",
+      "PastEventsTitle": "Completed Events",
+      "Workshops": {
+        "DigitalLiteracy": {
+          "Title": "Digital Literacy Training",
+          "Description": "Comprehensive training program to equip survivors with digital skills for accessing online support and resources."
+        },
+        "TraumaCare": {
+          "Title": "Trauma Care Workshop",
+          "Description": "Specialized workshop for mental health professionals on trauma-informed care and counseling techniques."
+        },
+        "SurvivorRights": {
+          "Title": "Survivor Rights Awareness",
+          "Description": "Educational sessions on legal rights, compensation procedures, and accessing government support schemes."
+        }
+      },
+      "PastEvents": {
+        "TraumaFirstAid": {
+          "Title": "Trauma-First Aid Training",
+          "Description": "Workshop for field staff on trauma-first aid, active listening, and empathetic care techniques."
+        },
+        "AssessmentTools": {
+          "Title": "Assessment Tools Training",
+          "Description": "Training session for frontline workers on ethical interviewing and data protection protocols."
+        },
+        "PMEWorkshop": {
+          "Title": "Supervision & Orientation Workshop",
+          "Description": "Planning, monitoring, and evaluation workshop for project staff and coordinators."
+        }
+      },
+      "RegisterButton": "Register Interest",
+      "MonthlyWebinars": {
+        "Title": "Monthly Webinar Series",
+        "Description": "Regular online sessions covering various aspects of survivor support and rights awareness.",
+        "Topics": {
+          "SurvivorRights": "Understanding Survivor Rights & Legal Procedures",
+          "MentalHealth": "Mental Health & Trauma Recovery",
+          "LegalAid": "Accessing Legal Aid & Compensation"
+        }
+      }
+    },
+    "UpcomingEvents": {
+      "Title": "Upcoming Events & Targets",
+      "Description": "Major events and targets planned for August to December 2025 to expand our impact.",
+      "Events": {
+        "PlatformLaunch": {
+          "Title": "Official Platform Launch",
+          "Description": "Official launch and outreach event for the Connect+ ICT-based Survivor Support Platform."
+        },
+        "SurvivorExpansion": {
+          "Title": "Survivor Onboarding Expansion",
+          "Description": "Target to onboard 100 additional survivors onto the Connect+ platform for expanded support access."
+        },
+        "TestimonyCollection": {
+          "Title": "Testimony Collection Drive",
+          "Description": "Comprehensive drive to collect and document 150 survivor testimonies for advocacy and research."
+        }
+      },
+      "TargetsTitle": "2025 Year-End Targets",
+      "Targets": {
+        "Testimonies": "Total Testimonies",
+        "DigitalLiteracy": "Digital Literacy Trained",
+        "Webinars": "Monthly Webinars",
+        "TotalSurvivors": "Total Survivors Supported"
+      },
+      "CTATitle": "Stay Connected With Our Work",
+      "CTADescription": "Join our mailing list to receive updates about upcoming events, workshops, and project milestones.",
+      "StayUpdated": "Get Updates"
+    },
+    "VisualGallery": {
+      "Title": "Visual Gallery & Recognitions",
+      "Description": "Capturing moments from our field activities, ceremonies, and recognition events.",
+      "GalleryTitle": "Event Gallery",
+      "AwardsTitle": "Awards & Recognitions",
+      "GalleryItems": {
+        "TestimonialTherapy": {
+          "Title": "Testimonial Therapy Session",
+          "Description": "Testimonial therapy provided to a survivor of police torture, facilitating healing through shared experiences."
+        },
+        "FieldEngagement": {
+          "Title": "Field Staff Engagement",
+          "Description": "Our staff and therapists engaging with survivors of police torture and organized violence in community settings."
+        },
+        "SeekingRedress": {
+          "Title": "Survivors Seeking Redress",
+          "Description": "Survivors assembled to share their sufferings and seek redress through collective advocacy and support."
+        },
+        "HealingHonour": {
+          "Title": "Healing through Honour Ceremony",
+          "Description": "Ceremony of truth, tears, and testimony transforming pain into empowerment and community healing."
+        },
+        "CompassionateAdvocacy": {
+          "Title": "Compassionate Advocacy",
+          "Description": "Direct engagement with affected families, showing hope, humanity, and commitment to healing."
+        },
+        "ReintegrationCeremony": {
+          "Title": "Reintegration Ceremonies",
+          "Description": "Community ceremonies celebrating survivor reintegration and honoring their journey to recovery."
+        }
+      },
+      "Awards": {
+        "HealthIcon": {
+          "Title": "Health Icon Awards 2025",
+          "Description": "Recognized for excellence in integrating justice and public health approaches in victim support."
+        },
+        "YouthSelection": {
+          "Title": "Youth Leadership Selection",
+          "Description": "Law intern selected for May 18 Academy in South Korea, representing youth engagement in human rights."
+        }
+      },
+      "MediaCoverage": {
+        "Title": "Media Coverage & Features",
+        "FeaturedIRCT": "Featured in IRCT Global Evaluation Report",
+        "HealthAwards": "Health Icon Awards recognition",
+        "BlogPublications": "Multiple blog publications and articles",
+        "YouthEngagement": "Youth engagement and leadership programs"
+      },
+      "Campaigns": {
+        "Title": "Campaigns & Advocacy Events",
+        "TortureFree": "Towards a Torture-Free Society campaign",
+        "SurvivorRights": "Survivor rights awareness campaigns",
+        "DigitalLiteracy": "Digital literacy and access initiatives",
+        "LegalAid": "Legal aid and compensation advocacy"
+      }
+    }
   }
 }

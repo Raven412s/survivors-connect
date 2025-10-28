@@ -5,21 +5,16 @@ import ReintegrationStories from "@/components/pages/survivor-voices/reintegrati
 import SubmitStorySection from "@/components/pages/survivor-voices/submit-story-section";
 import SuccessStories from "@/components/pages/survivor-voices/success-stories";
 import TestimoniesSection from "@/components/pages/survivor-voices/testimonies-section";
-import { NextIntlClientProvider } from "next-intl";
 
 export default async function SurvivorVoicesPage() {
   return (
     <main className="w-full">
       <PhilosophySection />
-      <NextIntlClientProvider>
-        <TestimoniesSection />
-      </NextIntlClientProvider>
+      <TestimoniesSection />
       <ReintegrationStories />
       <SuccessStories />
       <ImpactSection />
-      <NextIntlClientProvider>
       <SubmitStorySection />
-      </NextIntlClientProvider>
     </main>
   );
 }
