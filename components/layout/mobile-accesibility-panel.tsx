@@ -1,7 +1,6 @@
-import React from 'react'
-import ConnectPlus from '../buttons/connect-plus'
 import { cn } from '@/lib/utils'
 import ToggleActions from '../action-blocks/navbar/ToggleActions'
+import ConnectPlusModal from '../modals/connect+_modal'
 
 export default function MobileAccesibilityPanel({className}:{className?: string}) {
   return (
@@ -12,7 +11,7 @@ export default function MobileAccesibilityPanel({className}:{className?: string}
       "bg-accent/20 backdrop-blur-sm border-3 border-b-0 rounded-t-lg",
       className
       )}>
-      <ConnectPlus/>
+      <ConnectPlusModal/>
       <ToggleActions/>
     </div>
   )

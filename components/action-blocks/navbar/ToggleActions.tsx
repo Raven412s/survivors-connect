@@ -20,7 +20,9 @@ export default function ToggleActions({className}:{className?: string}) {
     }
     return (
         <div className={cn('rounded-sm flex gap-2 items-center', className)}>
-            <ConnectPlusModal />
+            <div className="hidden md:inline-flex">
+                <ConnectPlusModal />
+            </div>
             <ThemeToggler 
                variant='rectangle' 
                start='bottom-up'

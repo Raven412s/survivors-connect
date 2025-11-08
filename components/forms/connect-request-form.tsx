@@ -180,18 +180,49 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
     setLoading(true);
     try {
       const fd = new FormData();
-      fd.append('name', form.name);
-      fd.append('phone', form.phone);
-      fd.append('address', form.address);
+      
+      // Add required fields
+      fd.append('name', form.name.trim());
+      fd.append('phone', form.phone.trim());
       fd.append('category', form.category);
-      fd.append('message', form.message);
-      if (photoBlob) fd.append('photo', photoBlob, 'photo.jpg');
-      if (audioBlob) fd.append('audio', audioBlob, 'voice.webm');
-      if (latLng) {
+      
+      // Add optional fields only if they have values
+      if (form.address.trim()) {
+        fd.append('address', form.address.trim());
+      }
+      if (form.message.trim()) {
+        fd.append('message', form.message.trim());
+      }
+      
+      // Add photo only if available and valid
+      if (photoBlob && photoBlob.size > 0) {
+        fd.append('photo', photoBlob, 'photo.jpg');
+      }
+      
+      // Add audio only if available and valid
+      if (audioBlob && audioBlob.size > 0) {
+        fd.append('audio', audioBlob, 'voice.webm');
+      }
+      
+      // Add location only if available
+      if (latLng && !isNaN(latLng.lat) && !isNaN(latLng.lng)) {
         fd.append('lat', String(latLng.lat));
         fd.append('lng', String(latLng.lng));
-        if (latLng.accuracy) fd.append('accuracy', String(latLng.accuracy));
+        if (latLng.accuracy) {
+          fd.append('accuracy', String(latLng.accuracy));
+        }
       }
+
+      console.log('Submitting form with:', {
+        name: form.name,
+        phone: form.phone,
+        category: form.category,
+        hasPhoto: !!photoBlob,
+        hasAudio: !!audioBlob,
+        hasLocation: !!latLng,
+        photoSize: photoBlob?.size,
+        audioSize: audioBlob?.size
+      });
 
       const res = await fetch('/api/connect-request', {
         method: 'POST',
@@ -199,18 +230,23 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Server error');
+      
+      if (!res.ok) {
+        throw new Error(data?.error || data?.details || 'Server error');
+      }
 
       alert('Request submitted — help team will contact you soon');
+      
       // Reset form
       setForm({ name: '', phone: '', address: '', category: '', message: '' });
       setPhotoBlob(null);
       setAudioBlob(null);
       setLatLng(null);
+      
       if (onSuccess) onSuccess();
     } catch (err) {
-      console.error(err);
-      alert('Submission failed');
+      console.error('Submission error:', err);
+      alert(`Submission failed: 'Please try again'}`);
     } finally {
       setLoading(false);
     }
