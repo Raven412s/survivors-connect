@@ -13,7 +13,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Camera, Mic, Square, MapPin, Loader2 } from "lucide-react";
+import { Camera, Mic, Square, MapPin, Loader2, FlipHorizontal } from "lucide-react";
+import Image from 'next/image';
 
 type Props = { onSuccess?: () => void };
 
@@ -29,6 +30,7 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
   const [recording, setRecording] = useState(false);
   const [latLng, setLatLng] = useState<{ lat: number; lng: number; accuracy?: number } | null>(null);
   const [loading, setLoading] = useState(false);
+  const [usingFrontCamera, setUsingFrontCamera] = useState(false);
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -47,15 +49,26 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
   ];
 
   // Camera functions
-  async function startCamera() {
-    if (stream) return;
+  async function startCamera(useFrontCamera = false) {
+    if (stream) {
+      stopCamera();
+    }
+    
     try {
-      const s = await navigator.mediaDevices.getUserMedia({ 
-        video: { facingMode: 'environment' } 
-      });
+      const constraints = { 
+        video: { 
+          facingMode: useFrontCamera ? 'user' : 'environment' 
+        } 
+      };
+      
+      const s = await navigator.mediaDevices.getUserMedia(constraints);
       setStream(s);
-      if (videoRef.current) videoRef.current.srcObject = s;
-      videoRef.current?.play();
+      setUsingFrontCamera(useFrontCamera);
+      
+      if (videoRef.current) {
+        videoRef.current.srcObject = s;
+        videoRef.current.play();
+      }
     } catch (err) {
       console.error('Camera error', err);
       alert('Camera access denied or unavailable.');
@@ -69,6 +82,12 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
     }
   }
 
+  function switchCamera() {
+    if (stream) {
+      startCamera(!usingFrontCamera);
+    }
+  }
+
   function capturePhoto() {
     if (!videoRef.current) return;
     const video = videoRef.current;
@@ -76,7 +95,20 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     const ctx = canvas.getContext('2d')!;
+    
+    // Flip the image if using front camera to match mirror view
+    if (usingFrontCamera) {
+      ctx.translate(canvas.width, 0);
+      ctx.scale(-1, 1);
+    }
+    
     ctx.drawImage(video, 0, 0);
+    
+    // Reset transformation
+    if (usingFrontCamera) {
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+    }
+    
     canvas.toBlob(blob => {
       if (blob) {
         setPhotoBlob(blob);
@@ -262,41 +294,68 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
             <div className="space-y-3">
               <video 
                 ref={videoRef} 
-                className={`rounded-lg border ${stream ? 'block' : 'hidden'} max-w-full`} 
+                className={`rounded-lg border ${stream ? 'block' : 'hidden'} max-w-full mx-auto ${
+                  usingFrontCamera ? '-scale-x-100' : ''
+                }`} 
                 playsInline 
                 muted
+                style={{ maxHeight: '300px' }}
               />
-              <div className="flex gap-2 flex-wrap">
-                <Button type="button" onClick={startCamera} variant="outline" size="sm">
-                  Open Camera
-                </Button>
-                <Button 
-                  type="button" 
-                  onClick={capturePhoto} 
-                  variant="default" 
-                  size="sm"
-                  disabled={!stream}
-                >
-                  Capture Photo
-                </Button>
-                <Button 
-                  type="button" 
-                  onClick={stopCamera} 
-                  variant="outline" 
-                  size="sm"
-                  disabled={!stream}
-                >
-                  Close Camera
-                </Button>
+              <div className="flex gap-2 flex-wrap justify-center">
+                {!stream ? (
+                  <>
+                    <Button type="button" onClick={() => startCamera(false)} variant="outline" size="sm">
+                      <Camera className="w-4 h-4 mr-2" />
+                      Back Camera
+                    </Button>
+                    <Button type="button" onClick={() => startCamera(true)} variant="outline" size="sm">
+                      <Camera className="w-4 h-4 mr-2" />
+                      Front Camera
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button 
+                      type="button" 
+                      onClick={capturePhoto} 
+                      variant="default" 
+                      size="sm"
+                    >
+                      <Camera className="w-4 h-4 mr-2" />
+                      Capture Photo
+                    </Button>
+                    <Button 
+                      type="button" 
+                      onClick={switchCamera} 
+                      variant="outline" 
+                      size="sm"
+                    >
+                      <FlipHorizontal className="w-4 h-4 mr-2" />
+                      Switch Camera
+                    </Button>
+                    <Button 
+                      type="button" 
+                      onClick={stopCamera} 
+                      variant="outline" 
+                      size="sm"
+                    >
+                      Close Camera
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           ) : (
-            <div className="space-y-3">
-              <img
-                src={URL.createObjectURL(photoBlob)}
-                alt="Captured"
-                className="rounded-lg max-h-48 mx-auto border"
-              />
+            <div className="space-y-3 text-center">
+              <div className="relative w-48 h-48 mx-auto rounded-lg overflow-hidden border-2 border-gray-300">
+                <Image
+                  src={URL.createObjectURL(photoBlob)}
+                  alt="Captured photo"
+                  fill
+                  className="object-cover"
+                  sizes="192px"
+                />
+              </div>
               <Button 
                 type="button" 
                 onClick={() => setPhotoBlob(null)} 
@@ -325,6 +384,7 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
             onClick={recording ? stopRecording : startRecording}
             variant={recording ? "destructive" : "outline"}
             size="sm"
+            className="w-full sm:w-auto"
           >
             {recording ? (
               <>
@@ -369,6 +429,7 @@ export default function ConnectRequestForm({ onSuccess }: Props) {
             onClick={fetchLocation}
             variant="outline"
             size="sm"
+            className="w-full sm:w-auto"
           >
             <MapPin className="w-4 h-4 mr-2" />
             Share My Location
