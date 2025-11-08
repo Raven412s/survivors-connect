@@ -1,8 +1,8 @@
-import { NextResponse } from 'next/server';
-import connectDB from '@/lib/mongoDB';
-import { ConnectRequest } from '@/models/ConnectRequest';
-import { v2 as cloudinary } from 'cloudinary';
-import streamifier from 'streamifier';
+import { NextResponse } from "next/server";
+import connectDB from "@/lib/mongoDB";
+import { ConnectRequest } from "@/models/ConnectRequest";
+import { v2 as cloudinary } from "cloudinary";
+import streamifier from "streamifier";
 
 // Configure Cloudinary
 cloudinary.config({
@@ -36,9 +36,9 @@ interface CreateConnectRequestData {
   message?: string;
   photoUrl?: string;
   audioUrl?: string;
-  status: 'pending' | 'assigned' | 'in_progress' | 'resolved' | 'closed';
+  status: "pending" | "assigned" | "in_progress" | "resolved" | "closed";
   location?: {
-    type: 'Point';
+    type: "Point";
     coordinates: [number, number];
     accuracy?: number;
   };
@@ -52,8 +52,8 @@ interface CreateConnectRequestData {
  */
 async function uploadBuffer(
   buffer: Buffer,
-  folder = 'connect_requests',
-  resourceType: 'image' | 'video' | 'raw' = 'image'
+  folder = "connect_requests",
+  resourceType: "image" | "video" | "raw" = "image"
 ): Promise<CloudinaryUploadResult> {
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
@@ -63,7 +63,8 @@ async function uploadBuffer(
       },
       (error, result) => {
         if (error) return reject(error);
-        if (!result) return reject(new Error('Upload failed: No result from Cloudinary'));
+        if (!result)
+          return reject(new Error("Upload failed: No result from Cloudinary"));
         resolve(result);
       }
     );
@@ -72,40 +73,46 @@ async function uploadBuffer(
 }
 
 // Helper extractors
-const getFileFromFormData = (formData: FormData, field: string): File | null => {
+const getFileFromFormData = (
+  formData: FormData,
+  field: string
+): File | null => {
   const file = formData.get(field);
   return file instanceof File ? file : null;
 };
-const getStringFromFormData = (formData: FormData, field: string): string | null => {
+const getStringFromFormData = (
+  formData: FormData,
+  field: string
+): string | null => {
   const value = formData.get(field);
-  return typeof value === 'string' ? value : null;
+  return typeof value === "string" ? value : null;
 };
 
 export async function POST(req: Request): Promise<NextResponse> {
+  await connectDB();
   try {
     const formData = await req.formData();
 
     const form: ConnectRequestFormData = {
-      name: getStringFromFormData(formData, 'name') || '',
-      phone: getStringFromFormData(formData, 'phone') || '',
-      address: getStringFromFormData(formData, 'address') || undefined,
-      category: getStringFromFormData(formData, 'category') || '',
-      message: getStringFromFormData(formData, 'message') || undefined,
-      lat: getStringFromFormData(formData, 'lat') || undefined,
-      lng: getStringFromFormData(formData, 'lng') || undefined,
-      accuracy: getStringFromFormData(formData, 'accuracy') || undefined,
-      photo: getFileFromFormData(formData, 'photo') || undefined,
-      audio: getFileFromFormData(formData, 'audio') || undefined,
+      name: getStringFromFormData(formData, "name") || "",
+      phone: getStringFromFormData(formData, "phone") || "",
+      address: getStringFromFormData(formData, "address") || undefined,
+      category: getStringFromFormData(formData, "category") || "",
+      message: getStringFromFormData(formData, "message") || undefined,
+      lat: getStringFromFormData(formData, "lat") || undefined,
+      lng: getStringFromFormData(formData, "lng") || undefined,
+      accuracy: getStringFromFormData(formData, "accuracy") || undefined,
+      photo: getFileFromFormData(formData, "photo") || undefined,
+      audio: getFileFromFormData(formData, "audio") || undefined,
     };
 
     if (!form.name.trim() || !form.phone.trim() || !form.category.trim()) {
       return NextResponse.json(
-        { error: 'Name, phone, and category are required fields' },
+        { error: "Name, phone, and category are required fields" },
         { status: 400 }
       );
     }
 
-    await connectDB();
 
     let photoUrl: string | undefined;
     let audioUrl: string | undefined;
@@ -114,10 +121,14 @@ export async function POST(req: Request): Promise<NextResponse> {
     if (form.photo) {
       try {
         const buffer = Buffer.from(await form.photo.arrayBuffer());
-        const uploaded = await uploadBuffer(buffer, 'connect_requests/photos', 'image');
+        const uploaded = await uploadBuffer(
+          buffer,
+          "connect_requests/photos",
+          "image"
+        );
         photoUrl = uploaded.secure_url;
       } catch (err) {
-        console.error('❌ Photo upload failed:', err);
+        console.error("❌ Photo upload failed:", err);
       }
     }
 
@@ -125,10 +136,14 @@ export async function POST(req: Request): Promise<NextResponse> {
     if (form.audio) {
       try {
         const buffer = Buffer.from(await form.audio.arrayBuffer());
-        const uploaded = await uploadBuffer(buffer, 'connect_requests/audio', 'video');
+        const uploaded = await uploadBuffer(
+          buffer,
+          "connect_requests/audio",
+          "video"
+        );
         audioUrl = uploaded.secure_url;
       } catch (err) {
-        console.error('❌ Audio upload failed:', err);
+        console.error("❌ Audio upload failed:", err);
       }
     }
 
@@ -140,19 +155,31 @@ export async function POST(req: Request): Promise<NextResponse> {
       message: form.message?.trim(),
       photoUrl,
       audioUrl,
-      status: 'pending',
+      status: "pending",
     };
 
-    if (form.lat && form.lng) {
-      const lat = parseFloat(form.lat);
-      const lng = parseFloat(form.lng);
-      if (!isNaN(lat) && !isNaN(lng)) {
-        data.location = {
-          type: 'Point',
-          coordinates: [lng, lat],
-          accuracy: form.accuracy ? parseFloat(form.accuracy) : undefined,
-        };
+    // ✅ Only add location if both lat & lng are valid numbers
+    const lat = form.lat && !isNaN(Number(form.lat)) ? Number(form.lat) : null;
+    const lng = form.lng && !isNaN(Number(form.lng)) ? Number(form.lng) : null;
+
+    if (lat !== null && lng !== null) {
+      data.location = {
+        type: "Point",
+        coordinates: [lng, lat],
+      };
+
+      if (form.accuracy && !isNaN(Number(form.accuracy))) {
+        data.location.accuracy = Number(form.accuracy);
       }
+    }
+
+    // optional safety guard before save
+    if (
+      data.location &&
+      (!Array.isArray(data.location.coordinates) ||
+        data.location.coordinates.length !== 2)
+    ) {
+      delete data.location;
     }
 
     const created = await ConnectRequest.create(data);
@@ -161,14 +188,17 @@ export async function POST(req: Request): Promise<NextResponse> {
       {
         success: true,
         id: created._id,
-        message: 'Help request submitted successfully',
+        message: "Help request submitted successfully",
       },
       { status: 201 }
     );
   } catch (error) {
-    console.error('❌ ConnectRequest API error:', error);
+    console.error("❌ ConnectRequest API error:", error);
     return NextResponse.json(
-      { error: 'Failed to submit help request', details: (error as Error).message },
+      {
+        error: "Failed to submit help request",
+        details: (error as Error).message,
+      },
       { status: 500 }
     );
   }
@@ -184,7 +214,10 @@ export async function GET(): Promise<NextResponse> {
 
     return NextResponse.json({ requests });
   } catch (error) {
-    console.error('❌ Failed to fetch connect requests:', error);
-    return NextResponse.json({ error: 'Failed to fetch requests' }, { status: 500 });
+    console.error("❌ Failed to fetch connect requests:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch requests" },
+      { status: 500 }
+    );
   }
 }
