@@ -33,5 +33,7 @@ export const verifyToken = (token: string): JwtPayload => {
     return jwt.verify(token, JWT_SECRET) as JwtPayload;
   } catch (error) {
     throw new AuthError('Invalid token');
+
+    console.log(error)
   }
 };

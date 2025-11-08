@@ -1,6 +1,6 @@
 "use client"
 import { cn } from "@/lib/utils";
-import { motion as m } from "framer-motion";
+import {motion}  from "framer-motion";
 import { AnimationStart, AnimationVariant, useThemeToggle } from "@/components/ui/skiper-ui/skiper26";
 import { Button } from "@/components/ui/button";
 
@@ -58,7 +58,7 @@ export const ThemeToggler = ({
             aria-label="Toggle theme"
         >
             <span className="sr-only">Toggle theme</span>
-            <m.svg
+            <motion.svg
                 strokeWidth="4"
                 strokeLinecap="round"
                 width={50}
@@ -68,7 +68,7 @@ export const ThemeToggler = ({
                 xmlns="http://www.w3.org/2000/svg"
                 className="relative"
             >
-                <m.path
+                <motion.path
                     variants={{
                         hidden: {
                             opacity: 0,
@@ -94,14 +94,14 @@ export const ThemeToggler = ({
                     animate={!isDark ? "visible" : "hidden"}
                 />
 
-                <m.g
+                <motion.g
                     variants={raysVariants}
                     initial="hidden"
                     animate={isDark ? "visible" : "hidden"}
                     className="stroke-6 stroke-yellow-600 "
                     style={{ strokeLinecap: "round" }}
                 >
-                    <m.path
+                    <motion.path
                         className="origin-center"
                         variants={{
                             hidden: {
@@ -126,7 +126,7 @@ export const ThemeToggler = ({
                         }}
                         d="M50 2V11"
                     />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -147,7 +147,7 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M85 15L78 22" />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -168,7 +168,7 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M98 50H89" />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -189,7 +189,7 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M85 85L78 78" />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -210,7 +210,7 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M50 98V89" />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -231,7 +231,7 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M23 78L16 84" />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -252,7 +252,7 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M11 50H2" />
-                    <m.path variants={{
+                    <motion.path variants={{
                         hidden: {
                             pathLength: 0,
                             opacity: 0,
@@ -273,9 +273,9 @@ export const ThemeToggler = ({
                             },
                         },
                     }} d="M23 23L16 16" />
-                </m.g>
+                </motion.g>
 
-                <m.path
+                <motion.path
                     d={sunPath}
                     fill="transparent"
                     transition={{ duration: 1, type: "spring" }}
@@ -302,7 +302,7 @@ export const ThemeToggler = ({
                             }
                     }
                 />
-            </m.svg>
+            </motion.svg>
         </Button>
     );
 };

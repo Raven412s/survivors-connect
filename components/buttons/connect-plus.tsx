@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { PlusIcon } from "lucide-react";
 
-export default function ConnectPlus({className}:{className?: string}) {
+export default function ConnectPlus({className, handleClick}:{className?: string, handleClick?: () => void}) {
   const pathname = usePathname();
 
   return (
@@ -19,6 +19,7 @@ export default function ConnectPlus({className}:{className?: string}) {
         "hover:scale-110 transition-all duration-300",
         className
       )}
+      onClick={handleClick}
     >
       <span>Connect</span>
       <PlusIcon className="size-4 md:size-5"/>
