@@ -142,7 +142,7 @@
       "Purpose-Title": "Establishment Purpose",
       "Purpose-Description": "JMN works to ensure basic rights for marginalized groups in Indian society, including children, women, Dalits, and tribes. The organization aims to establish the rule of law through participatory activism against issues such as extrajudicial killing, police torture, hunger, bonded labour, and injustice by the caste system."
     },
-     "ActivitiesImpact": {
+    "ActivitiesImpact": {
       "Badge": "Impact & Activities",
       "Title": "Our Work & Impact",
       "Description": "Over two decades of extensive work with victims of torture, police violence, and caste-based discrimination",
@@ -351,7 +351,7 @@
           "Description": "Accessing peer support, counseling, and community resources"
         }
       },
-          "Anonymous": "Anonymous"
+      "Anonymous": "Anonymous"
     },
     "SuccessStories": {
       "Title": "Success Stories",
@@ -428,7 +428,7 @@
       }
     }
   },
-   "GetInvolvedPage": {
+  "GetInvolvedPage": {
     "VisionMission": {
       "Badge": "Our Purpose",
       "Title": "Empowering Victims of Torture: Join Our Movement for Justice and Healing",
@@ -651,7 +651,7 @@
         "Description": "Recognized for excellence in integrating justice and public health approaches in victim support."
       }
     },
-     "Modals": {
+    "Modals": {
       "ProfessionalNetwork": {
         "Title": "Join Our Professional Network",
         "Form": {
@@ -741,7 +741,7 @@
       }
     }
   },
-   "ContactUsPage": {
+  "ContactUsPage": {
     "OrganizationIdentity": {
       "Badge": "Who We Are",
       "Title": "Contact Jan Mitra Nyas & PVCHR",
@@ -928,7 +928,7 @@
       }
     }
   },
-   "EventsActivitiesPage": {
+  "EventsActivitiesPage": {
     "ProjectOverview": {
       "Badge": "Project Overview",
       "Title": "Empowering Victims of Torture: Events & Activities",
@@ -1218,6 +1218,514 @@
         "SurvivorRights": "Survivor rights awareness campaigns",
         "DigitalLiteracy": "Digital literacy and access initiatives",
         "LegalAid": "Legal aid and compensation advocacy"
+      }
+    }
+  },
+  "SupportServices": {
+    "Introduction-Section": {
+      "Mission-Badge": "Comprehensive Support System",
+      "Title": "A Complete <highlight>Support Architecture</highlight> for Healing & Justice",
+      "Description": "Our integrated approach provides survivors with comprehensive support through four interconnected pillars, guiding them from trauma to transformation.",
+      "Services": {
+        "Connect-Platform": {
+          "Title": "Connect+ Platform",
+          "Description": "Safe digital space for peer support and resource sharing"
+        },
+        "Psychosocial-Care": {
+          "Title": "Psychosocial Care",
+          "Description": "Trauma-informed counseling and therapeutic interventions"
+        },
+        "Legal-Aid": {
+          "Title": "Legal Aid & Advocacy",
+          "Description": "Legal representation and justice system navigation"
+        },
+        "Capacity-Building": {
+          "Title": "Capacity Building",
+          "Description": "Training and resources for survivors and defenders"
+        }
+      },
+      "Mission-Statement": {
+        "Title": "Our Guiding Philosophy",
+        "Description": "This comprehensive support architecture operates like a compass for justice and healing, simultaneously guiding survivors to safety, charting their path through the legal wilderness, equipping fellow travelers with essential skills, and maintaining a resilient communication hub for all participants."
+      }
+    },
+    "Connect-Platform": {
+      "Badge": "Digital Innovation",
+      "Title": "Connect+ Platform",
+      "Description": "An ICT-based, interactive platform designed to strengthen victim support and build information bridges. Fosters networking, knowledge-sharing, and mutual support among survivors, human rights defenders, and stakeholders.",
+      "Features": {
+        "Safe-Space": {
+          "Title": "Safe Digital Space",
+          "Description": "A secure and accessible environment for victims to share stories and seek guidance.",
+          "Security": {
+            "2FA": "2-factor authentication",
+            "Anonymous": "Anonymous posting system",
+            "Moderation": "Advanced moderation tools"
+          }
+        },
+        "Peer-Support": {
+          "Title": "Peer Support & Solidarity",
+          "Description": "Facilitates peer learning and survivor engagement with online counseling and support groups."
+        },
+        "Resource-Hub": {
+          "Title": "Resource Hub",
+          "Description": "Compiled information on legal rights, mental health services, and government support schemes."
+        }
+      },
+      "Benefits": {
+        "Title": "Platform Benefits",
+        "List": {
+          "Professional-Network": "Professional volunteer network of lawyers and counselors",
+          "Online-Counseling": "Online counseling via chat/voice",
+          "Sustainability": "Sustainable platform continuing beyond project period"
+        }
+      },
+      "Quote": "A bridge from silence to voice, from isolation to solidarity"
+    },
+    "Psychosocial-Care": {
+      "Badge": "Healing & Recovery",
+      "Title": "Psychosocial Care",
+      "Description": "Comprehensive psycho-social support focusing on emotional resilience, mental health, and holistic recovery of victims, aligned with trauma-informed care principles.",
+      "Components": {
+        "Trauma-Counseling": {
+          "Title": "Trauma-Informed Counseling",
+          "Description": "Specialized counseling services available both in-person and digitally for primary and secondary victims."
+        },
+        "Testimonial-Therapy": {
+          "Title": "Testimonial Therapy",
+          "Description": "Structured sessions where survivors narrate experiences in supportive environments, facilitating emotional healing and advocacy."
+        },
+        "Peer-Counseling": {
+          "Title": "Peer Counseling",
+          "Description": "Community-based support groups facilitating mutual storytelling and collective affirmation to reduce isolation."
+        },
+        "Family-Support": {
+          "Title": "Family Support",
+          "Description": "Family therapy interventions to address trauma-related strain and rebuild trust and cohesion."
+        }
+      },
+      "Impact": {
+        "Title": "Healing Outcomes",
+        "List": {
+          "Emotional-Healing": "Emotional healing through structured therapeutic processes",
+          "Restoration-Dignity": "Restoration of dignity and self-worth",
+          "Reduced-Isolation": "Reduced isolation through community support",
+          "Community-Reintegration": "Successful community reintegration with dignity"
+        }
+      },
+      "Approach": {
+        "Title": "Our Approach",
+        "Description": "Support aims to help victims process trauma, rebuild self-worth, and reintegrate into communities. High-risk cases are referred to specialized psychologists."
+      }
+    },
+    "Legal-Aid-Advocacy": {
+      "Badge": "Justice & Rights",
+      "Title": "Legal Aid & Advocacy",
+      "Description": "Ensuring victims receive justice through the legal system alongside emotional support. Facilitating institutional and judicial interventions to secure access to justice.",
+      "Services": {
+        "Direct-Legal-Support": {
+          "Title": "Direct Legal Support",
+          "Description": "Full legal representation including advice, drafting petitions, filing complaints, and court hearing support."
+        },
+        "Judicial-Advocacy": {
+          "Title": "Judicial & Institutional Advocacy",
+          "Description": "Collaboration with legal professionals to intervene with National/State Human Rights Commissions, courts, and other authorities."
+        },
+        "Compensation": {
+          "Title": "Redress & Compensation",
+          "Description": "Advocating for compensation and redress through successful interventions with human rights commissions."
+        }
+      },
+      "Impact": {
+        "Title": "Legal Impact",
+        "Compensation-Amount": "INR 95.5 Million+",
+        "Compensation-Description": "Compensation secured for survivors and next of kin",
+        "List": {
+          "Systemic-Advocacy": "Systemic advocacy for police accountability and structural reforms",
+          "Marginalized-Communities": "Empowerment of marginalized communities (Dalit, Adivasi, Muslim)",
+          "Rights-Awareness": "Enhanced awareness of constitutional and human rights"
+        }
+      },
+      "Empowerment": {
+        "Title": "Community Empowerment",
+        "Description": "Legal aid helps survivors from marginalized communities access formal legal systems for the first time, fostering rights awareness and empowerment."
+      }
+    },
+    "Capacity-Building": {
+      "Badge": "Training & Development",
+      "Title": "Capacity Building",
+      "Description": "Strengthening support services through comprehensive programs for victims, community leaders, and human rights defenders.",
+      "Components": {
+        "Training-Workshops": {
+          "Title": "Training Workshops",
+          "Description": "Sessions covering trauma management, coping mechanisms, legal rights, and self-care strategies for recovery and advocacy."
+        },
+        "Tools-Resources": {
+          "Title": "Tools for HR Defenders",
+          "Description": "Evidence-based methodologies and tools to recognize, address, and manage trauma in communities and themselves."
+        },
+        "Needs-Assessment": {
+          "Title": "Needs Assessment Tools",
+          "Description": "Victim-centric tools for organizational self-assessment and individual needs evaluation to tailor interventions effectively."
+        },
+        "Knowledge-Dissemination": {
+          "Title": "Knowledge Dissemination",
+          "Description": "Documenting and sharing findings, best practices, and lessons through publications, workshops, and training manuals."
+        }
+      },
+      "Benefits": {
+        "Title": "Capacity Outcomes",
+        "List": {
+          "Evidence-Based-Methodologies": "Evidence-based methodologies for trauma care",
+          "Victim-Centric-Approach": "Victim-centric service delivery approach",
+          "Policy-Informed-Research": "Policy-informed action-oriented research",
+          "Global-Knowledge-Contribution": "Contribution to global knowledge on trauma recovery"
+        }
+      },
+      "Research-Impact": {
+        "Title": "Research Impact",
+        "Description": "Our action-oriented research informs policy and enhances practice in torture prevention, contributing to the global body of knowledge on trauma recovery."
+      }
+    }
+  },
+  "ResearchPublications": {
+    "Introduction-Section": {
+      "Mission-Badge": "Knowledge Generation & Dissemination",
+      "Title": "Research & <highlight>Publications</highlight>",
+      "Description": "Documenting and disseminating knowledge to inform policy, strengthen victim support practices, and contribute to the global body of knowledge on trauma recovery and human rights advocacy.",
+      "Library-Analogy": {
+        "Title": "A Community Library of Survivor Narratives",
+        "Description-1": "This section functions like a community library built from <survivor>survivor narratives and expert analysis</survivor>.",
+        "Description-2": "It not only stores reports and case studies but also acts as a public record, ensuring that the experiences of torture victims are translated into evidence that can influence policy and strengthen global best practices."
+      },
+      "Stats": {
+        "Field-Testimonies": "Field Testimonies",
+        "Trauma-Cases": "Trauma Recovery Cases",
+        "Blog-Posts": "Blog Posts Published",
+        "Global-Recommendations": "Global Recommendations Integrated"
+      },
+      "Image-Placeholder": {
+        "Research-Documentation": "Image: Research documentation and data analysis in progress"
+      },
+      "Research-Impact": {
+        "Title": "Research Impact",
+        "Description": "Our action-oriented research focuses on the effectiveness of victim support services and the impact of various psycho-social interventions, including testimony therapy, contributing to evidence-based practices in torture prevention and victim support."
+      }
+    },
+    "Research-Activities": {
+      "Badge": "Key Research Activities",
+      "Title": "Research Activities & Contributions",
+      "Description": "January–July 2025: Action-oriented research to enhance practice in torture prevention and victim support.",
+      "Global-Research": {
+        "Title": "Global Research & Evaluation",
+        "IRCT-Participation": "Contributed to IRCT Global Evaluation Report on Livelihoods for Survivors of Torture",
+        "Comparative-Analysis": "Provided case studies and data from India across 19 centres",
+        "Global-Visibility": "PVCHR's community-based survivor model gained global visibility",
+        "Impact": {
+          "Title": "Global Impact",
+          "Description": "4 recommendations integrated into IRCT's global strategy, validating our livelihood justice model"
+        }
+      },
+      "Qualitative-Research": {
+        "Title": "Qualitative Research & Testimony",
+        "Testimonial-Analysis": "Analysis of testimonial therapy emotional and social impact",
+        "Participatory-Sessions": "Participatory reflection sessions with survivors",
+        "Field-Documentation": "Field documentation across Varanasi, Sonbhadra, and Jharkhand",
+        "Research-Base": {
+          "Title": "Research Foundation",
+          "Description": "19 field testimonies and 70 trauma recovery cases processed through narrative-based therapy"
+        }
+      },
+      "Policy-Influence": {
+        "Title": "Policy Influence & Learning",
+        "Policy-Writing": "Policy-oriented writing linking field realities to national discourse",
+        "Advocacy": "Advocacy for recognizing livelihood deprivation as human rights violation",
+        "Thematic-Analysis": "Analysis of livelihood loss, custodial torture, and social stigma",
+        "Impact": {
+          "Title": "Policy Impact",
+          "Description": "Findings used to advocate within Indian and global human rights frameworks"
+        }
+      },
+      "Image-Placeholder": {
+        "Research-Team": "Image: Research team conducting field interviews and analysis"
+      }
+    },
+    "Publications": {
+      "Badge": "Knowledge Dissemination",
+      "Title": "Publications & Digital Content",
+      "Description": "Findings, best practices, and lessons learned documented and disseminated through digital media, reports, and stakeholder engagement.",
+      "Featured-Reports": {
+        "Title": "Featured Research Reports",
+        "IRCT-Report": {
+          "Title": "PVCHR in IRCT Global Evaluation Report",
+          "Description": "Blog post disseminating insights from global research participation on livelihoods for torture survivors",
+          "Global-Contribution": "Global Strategy Contribution"
+        },
+        "Ghasia-Adivasis": {
+          "Title": "Justice for the Ghasia Adivasis",
+          "Description": "Case study highlighting emergency legal intervention and protection of Indigenous land rights in Sonbhadra",
+          "Emergency-Intervention": "Emergency Legal Action"
+        },
+        "Survivor-Stories": {
+          "Title": "Survivor Stories Publication",
+          "Description": "Publicly published survivor stories on testimonial therapy and justice-seeking",
+          "Story-1": "Shaheeba Bano: From Injustice to Inspiration",
+          "Story-2": "The Station House Officer said: 'We will not let your son become an MBBS doctor.'"
+        }
+      },
+      "Blogs-Media": {
+        "Title": "Blog Posts & Media Recognition",
+        "Blog-Posts": {
+          "Title": "Featured Blog Posts",
+          "Post-1": "Healing through Honour: A Ceremony of Truth, Tears, and Testimony",
+          "Post-2": "Towards a Torture-Free Society: A Call for Justice, Humanity, and Reform",
+          "Post-3": "Brick Kiln Bondage in Varanasi",
+          "Total-Posts": "12+ field-based blogs and survivor stories published"
+        },
+        "Media-Recognition": {
+          "Title": "Media & Documentary",
+          "Documentary": "IRCT documentary showcasing PVCHR's community-based rehabilitation model screened at Health Icon Awards 2025",
+          "Health-Awards": "JMN honoured at Dainik Jagran-Inext Health Icon Awards 2025"
+        }
+      },
+      "Tools-Documentation": {
+        "Title": "Tools & Documentation",
+        "Self-Assessment": {
+          "Title": "Self-Assessment Tools",
+          "Description": "Customized organizational and individual needs assessment tools"
+        },
+        "Implementation-Narratives": {
+          "Title": "Implementation Narratives",
+          "Description": "Survivor voices and implementation narratives documented"
+        },
+        "Workshop-Docs": {
+          "Title": "Workshop Documentation",
+          "Description": "Empowering Survivors Workshop and counseling sessions documented"
+        }
+      }
+    },
+    "Archives-Resources": {
+      "Badge": "Digital Archives",
+      "Title": "Archives & Organizational Resources",
+      "Description": "Comprehensive documentation of activities, programmes, and research findings available through our digital archives.",
+      "Organizational-Reports": {
+        "Title": "Organizational Reports",
+        "All-Reports": "All JMN Reports Archive",
+        "Annual-Report": {
+          "Title": "Annual Report 2023-2024",
+          "Year": "Latest comprehensive report"
+        },
+        "Coverage": {
+          "Title": "Comprehensive Coverage",
+          "Description": "Documents major activities including programmes for survivors of torture, women, children, and national lobbying efforts"
+        }
+      },
+      "Blog-Archives": {
+        "Title": "Blog Archives",
+        "PVCHR-Blog": {
+          "Title": "PVCHR Blog",
+          "Description": "Field reports, survivor stories, and advocacy updates"
+        },
+        "Testimonial-Blog": {
+          "Title": "Testimonial Healing Blog",
+          "Description": "Therapeutic narratives and healing journey documentation"
+        },
+        "Research-Contribution": {
+          "Title": "Research Contribution",
+          "Description": "Our blogs serve as living archives of survivor experiences and evidence for policy advocacy"
+        }
+      },
+      "Image-Placeholder": {
+        "Digital-Archive": "Image: Digital archive interface showing research database"
+      }
+    }
+  },
+  "NewsMedia": {
+    "Introduction-Section": {
+      "Mission-Badge": "Latest Updates & Coverage",
+      "Title": "News & <highlight>Media</highlight>",
+      "Description": "Latest updates, public acknowledgments, media coverage, and digital dissemination efforts from our project empowering victims of torture.",
+      "Stats": {
+        "Blog-Views": "Blog Views (July 2025)",
+        "Blog-Posts": "Blog Posts Published",
+        "Survivor-Cases": "Major Survivor Cases",
+        "Global-Centers": "Global Centers Involved"
+      },
+      "Project-Focus": {
+        "Title": "Project Overview",
+        "Description-1": "This page features updates from the project <project>\"Empowering Victims of Torture by Strengthening victim support and building information bridges\"</project>.",
+        "Description-2": "The project aims to empower victims of torture by significantly enhancing victim support services through legal assistance, psychosocial care, and leveraging technology.",
+        "Tags": {
+          "Legal-Assistance": "Legal Assistance",
+          "Psychosocial-Care": "Psychosocial Care",
+          "Technology": "Technology Leverage"
+        }
+      },
+      "Image-Placeholder": {
+        "Media-Coverage": "Image: Media coverage, press events, or project activities"
+      }
+    },
+    "Highlights-Recognition": {
+      "Badge": "Recent Highlights",
+      "Title": "Highlights & Public Recognition",
+      "Description": "Celebrating our achievements and recognition in integrating justice advocacy with public health services.",
+      "Health-Awards": {
+        "Title": "JMN Honoured at Health Icon Awards 2025",
+        "Date": "6 July 2025",
+        "Description": "Jan Mitra Nyas (JMN) was honoured during the Dainik Jagran-Inext Health Icon Awards 2025 for excellence in integrating justice advocacy with public health services.",
+        "Recognition": {
+          "Title": "Event Participation",
+          "Description": "The event featured team members, community survivors, and youth volunteers."
+        }
+      },
+      "Documentary": {
+        "Title": "Documentary Showcasing PVCHR's Community Model",
+        "Date": "6 July 2025",
+        "Description": "A documentary film by IRCT (Denmark) showcasing PVCHR's community-based rehabilitation model was screened publicly at the Health Icon Awards 2025.",
+        "Production": "Produced by International Rehabilitation Council for Torture Victims (IRCT)"
+      },
+      "Youth-Representation": {
+        "Title": "International Youth Representation",
+        "Date": "May 2025",
+        "Description": "Aditya Mishra, a law intern and survivor advocate, was selected to represent India globally at the May 18 Academy in Gwangju, South Korea.",
+        "Impact": {
+          "Title": "Global Platform",
+          "Description": "Amplification of youth voices and survivor leadership on international platforms addressing transitional justice and human rights."
+        }
+      },
+      "Global-Research": {
+        "Title": "Global Research Feature",
+        "Period": "2022-2024",
+        "Description": "PVCHR contributed case studies, survivor interviews, and data from India for IRCT Global Evaluation Report on Livelihoods for Torture Survivors.",
+        "Impact": {
+          "Title": "Global Visibility",
+          "Description": "PVCHR's community-based survivor model gained global visibility, contributing to shaping international standards in survivor rehabilitation."
+        }
+      },
+      "Image-Placeholder": {
+        "Award-Ceremony": "Image: Health Icon Awards ceremony or documentary screening event"
+      }
+    },
+    "Case-Studies-Advocacy": {
+      "Badge": "Advocacy & Cases",
+      "Title": "Case Studies & Legal Advocacy",
+      "Description": "Digital documentation and media advocacy amplifying survivor voices and pushing for institutional accountability.",
+      "Social-Media": {
+        "Title": "Social Media Advocacy",
+        "Date": "12 July 2025",
+        "Quote": "Injustice doesn't only happen to those falsely accused—it takes root in the silent suffering of innocent hearts left behind.",
+        "Support-Action": {
+          "Title": "Support Initiative",
+          "Description": "Dr. Lenin Raghuvanshi (Founder, PVCHR) offering support to a child whose father was falsely implicated, calling it a 'testament to hope, humanity, and healing'."
+        }
+      },
+      "Ghasia-Adivasis": {
+        "Title": "Justice for the Ghasia Adivasis",
+        "Description": "Emergency legal intervention conducted in Sonbhadra district to protect the Ghasia Adivasi community from potential forced displacement and secure their Indigenous land rights.",
+        "Emergency-Intervention": "Emergency Legal Action Successfully Implemented"
+      },
+      "Survivor-Narratives": {
+        "Title": "Survivor Narratives",
+        "Subtitle": "Publicly published stories on testimonial therapy and justice-seeking",
+        "Story-1": {
+          "Title": "Shaheeba Bano: From Injustice to Inspiration",
+          "Description": "A powerful journey of overcoming injustice and finding inspiration through testimonial therapy."
+        },
+        "Story-2": {
+          "Title": "The Station House Officer said: 'We will not let your son become an MBBS doctor.'",
+          "Description": "A story of institutional barriers and the fight for educational rights and dignity."
+        },
+        "Published-Case": "Published Case Study",
+        "Impact": {
+          "Title": "Advocacy Impact",
+          "Description": "Making at least 6 major survivor cases publicly shared through blogs, media reports, or video documentation."
+        }
+      },
+      "Image-Placeholder": {
+        "Advocacy-Action": "Image: Advocacy events, community meetings, or legal interventions"
+      }
+    },
+    "Blog-Dissemination": {
+      "Badge": "Digital Outreach",
+      "Title": "Blog Posts & Digital Dissemination",
+      "Description": "Over 12 field-based blogs and survivor stories published covering police torture, caste violence, bonded labour, and community empowerment.",
+      "Blog-Stats": {
+        "Title": "Blog Performance",
+        "Posts-Published": "Blog Posts Published",
+        "Total-Views": "Total Views (July 2025)",
+        "Coverage-Title": "Topics Covered"
+      },
+      "Featured-Posts": {
+        "Title": "Featured Blog Posts",
+        "Post-1": {
+          "Title": "Healing through Honour: A Ceremony of Truth, Tears, and Testimony",
+          "Date": "12 July 2025",
+          "Description": "A ceremony marking truth, emotional healing, and testimonial therapy outcomes."
+        },
+        "Post-2": {
+          "Title": "Towards a Torture-Free Society: A Call for Justice, Humanity, and Reform",
+          "Date": "26 June 2025",
+          "Description": "Advocacy for systemic reforms and a humane approach to justice."
+        },
+        "Post-3": {
+          "Title": "Brick Kiln Bondage in Varanasi",
+          "Description": "Documenting bonded labour practices and advocacy for workers' rights."
+        }
+      },
+      "Source-Links": {
+        "Title": "Source Links for Ongoing Updates",
+        "JMN-Website": "Jan Mitra Nyas (JMN) Website",
+        "PVCHR-Blog": "PVCHR Blog",
+        "Testimonial-Blog": "Testimonial Healing Blog",
+        "YouTube": "YouTube Channel",
+        "Project-Website": "Project Website"
+      }
+    },
+    "Media-Partners": {
+      "Badge": "Media Collaboration",
+      "Title": "Media Partners",
+      "Description": "Recognizing our digital media partner supporting dissemination and communication goals.",
+      "Viacam": {
+        "Title": "Viacam Productions",
+        "Tagline": "Digital Media Partner",
+        "Founder": {
+          "Title": "Founder & Leadership",
+          "Name": "Kartik Akaay",
+          "Position": "Founder & CEO",
+          "Location": "Gorakhpur, Uttar Pradesh, India"
+        },
+        "Details": {
+          "Location": {
+            "Title": "Office",
+            "Address": "House No. 71, Purdilpur, Jubilee Chowk, Gorakhpur (273001), Uttar Pradesh, India"
+          },
+          "Established": {
+            "Title": "Established",
+            "Year": "2023"
+          },
+          "Specialization": {
+            "Title": "Specialization",
+            "Description": "Social media branding, documentary and digital content production, web and mobile development, and strategic digital communication solutions."
+          }
+        },
+        "Partnership": {
+          "Title": "Partnership with Our Project",
+          "Description": "Viacam Productions is recognized as a Digital Media Partner supporting the dissemination and communication goals of the 'Survivor Connect' project.",
+          "Role": {
+            "Title": "Key Responsibilities",
+            "Digital-Dissemination": "Digital content dissemination and strategy",
+            "Communication-Strategy": "Communication and outreach planning",
+            "Content-Production": "Media content production and distribution"
+          }
+        },
+        "Placeholder": {
+          "Title": "Additional Partnership Details",
+          "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Note": "Placeholder text: Actual details regarding Viacam Productions' role, contribution, and duration of collaboration will be updated upon receipt."
+        }
+      },
+      "Image-Placeholder": {
+        "Viacam-Studio": "Image: Viacam Productions studio, team, or production work"
       }
     }
   }

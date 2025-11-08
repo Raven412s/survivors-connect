@@ -1,9 +1,6 @@
 import { Providers } from '@/components/providers/Providers';
-import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
-import { hasLocale } from 'next-intl';
 import { Geist, Geist_Mono } from "next/font/google";
-import { notFound } from 'next/navigation';
 import "../../globals.css";
 
 const geistSans = Geist({
@@ -28,13 +25,11 @@ type Props = {
 export default async function LocaleLayout({ children, params }: Props) {
     // Ensure that the incoming `locale` is valid
     const { locale } = await params;
-    if (!hasLocale(routing.locales, locale)) {
-        notFound();
-    }
+
     return (
-        <html lang={locale} suppressHydrationWarning>
+        <html lang={locale} >
             <body
-                suppressHydrationWarning
+            suppressHydrationWarning
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <Providers locale={locale}>{children}</Providers>

@@ -55,7 +55,7 @@ export default function Navbar() {
               className="relative inline-block cursor-pointer group text-sm font-medium"
             >
               <span className="relative z-10">{link.label}</span>
-              <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
           <Sheet>
@@ -91,7 +91,7 @@ export default function Navbar() {
                       className="relative inline-block cursor-pointer group text-lg font-medium"
                     >
                       <span className="relative z-10">{link.label}</span>
-                      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+                      <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
                     </Link>
                   </SheetClose>
                 ))}
@@ -143,7 +143,7 @@ export default function Navbar() {
                         className="relative inline-block cursor-pointer group text-lg font-medium"
                       >
                         <span className="relative z-10">{link.label}</span>
-                        <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+                        <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
                       </Link>
                     </SheetClose>
                   ))}
