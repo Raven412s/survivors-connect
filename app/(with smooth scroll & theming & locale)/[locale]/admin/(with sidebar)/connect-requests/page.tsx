@@ -316,7 +316,7 @@ export default function AdminConnectRequestManagementPage() {
                   <div className="flex items-start gap-2 justify-between">
                     {/* Photo Skeleton */}
                     <div className="w-32 h-32 rounded-lg bg-gray-200 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600" />
-                    
+
                     <div className="flex-1 space-y-2">
                       <div className="h-6 rounded-md bg-gray-200 dark:bg-gray-700" />
                       <div className="h-4 rounded-md bg-gray-200 dark:bg-gray-700 w-3/4" />
@@ -325,7 +325,7 @@ export default function AdminConnectRequestManagementPage() {
                         <div className="h-6 w-16 rounded-full bg-gray-200 dark:bg-gray-700" />
                       </div>
                     </div>
-                    
+
                     <div className="h-8 w-8 rounded-md bg-gray-200 dark:bg-gray-700" />
                   </div>
                 </CardHeader>
@@ -333,16 +333,16 @@ export default function AdminConnectRequestManagementPage() {
                 <CardContent className="space-y-4">
                   {/* Contact Info Skeleton */}
                   <div className="h-12 rounded-lg bg-gray-200 dark:bg-gray-700" />
-                  
+
                   {/* Message Skeleton */}
                   <div className="h-20 rounded-lg bg-gray-200 dark:bg-gray-700" />
-                  
+
                   {/* Audio Skeleton */}
                   <div className="space-y-2">
                     <div className="h-4 rounded-md bg-gray-200 dark:bg-gray-700 w-1/2" />
                     <div className="h-12 rounded-lg bg-gray-200 dark:bg-gray-700" />
                   </div>
-                  
+
                   {/* Map Skeleton */}
                   <div className="space-y-2">
                     <div className="h-4 rounded-md bg-gray-200 dark:bg-gray-700 w-1/3" />
@@ -380,7 +380,7 @@ export default function AdminConnectRequestManagementPage() {
             </CardContent>
           </Card>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="columns-1 sm:columns-2 xl:columns-3 gap-6 space-y-6">
             {filteredRequests.map((req) => {
               const { date, time } = formatDate(req.createdAt);
               const hasLocation = req.location && req.location.coordinates;
@@ -389,82 +389,82 @@ export default function AdminConnectRequestManagementPage() {
                 : null;
 
               return (
-                <Card key={req._id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600">
-                  <CardHeader className='py-0'>
-                    <div className="flex items-start gap-2 justify-between">
-                      {/* Photo */}
-                      {req.photoUrl && (
-                        <div className="relative w-32 h-32 rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-600 group-hover:border-blue-400 transition-colors duration-300">
-                          <Image
-                            src={req.photoUrl}
-                            alt="Attached photo"
-                            fill
-                            className="object-cover hover:scale-110 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300" />
-                        </div>
-                      )}
+                <div key={req._id} className="break-inside-avoid animate-fadeIn">
+                  <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600">
+                    <CardHeader className='py-0'>
+                      <div className="flex items-start gap-2 justify-between">
+                        {/* Photo */}
+                        {req.photoUrl && (
+                          <div className="relative w-32 h-32 rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-600 group-hover:border-blue-400 transition-colors duration-300">
+                            <Image
+                              src={req.photoUrl}
+                              alt="Attached photo"
+                              fill
+                              className="object-cover hover:scale-110 transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300" />
+                          </div>
+                        )}
 
-                      <div className="flex-1">
-                        <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
-                          {req.name}
-                        </CardTitle>
-                        <CardDescription className="text-gray-500 dark:text-gray-400">
-                          {date} at {time}
-                        </CardDescription>
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          <Badge className={`${getStatusColor(req.status)} font-medium`}>
-                            {req.status.replace('_', ' ')}
-                          </Badge>
-                          <Badge className={`${getCategoryColor(req.category)} font-medium`}>
-                            {req.category}
-                          </Badge>
+                        <div className="flex-1">
+                          <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
+                            {req.name}
+                          </CardTitle>
+                          <CardDescription className="text-gray-500 dark:text-gray-400">
+                            {date} at {time}
+                          </CardDescription>
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            <Badge className={`${getStatusColor(req.status)} font-medium`}>
+                              {req.status.replace('_', ' ')}
+                            </Badge>
+                            <Badge className={`${getCategoryColor(req.category)} font-medium`}>
+                              {req.category}
+                            </Badge>
+                          </div>
                         </div>
-                      </div>
 
-                      <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-8 w-8 p-0 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                          >
-                            <MoreHorizontal className="h-4 w-4" />
-                          </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white" align="end">
-                          <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                          <DropdownMenuSeparator className="bg-gray-200 dark:bg-gray-700" />
-                          <DropdownMenuItem className="hover:bg-gray-100 dark:hover:bg-gray-700">
-                            <Eye className="h-4 w-4 mr-2" />
-                            View Details
-                          </DropdownMenuItem>
-                          <DropdownMenuItem 
-                            className="hover:bg-gray-100 dark:hover:bg-gray-700"
-                            onClick={() => handleCallUser(req.phone)}
-                          >
-                            <Phone className="h-4 w-4 mr-2" />
-                            Call User
-                          </DropdownMenuItem>
-                          {hasLocation && (
-                            <DropdownMenuItem 
-                              className="hover:bg-gray-100 dark:hover:bg-gray-700"
-                              onClick={() => handleOpenMaps(req.location!.coordinates)}
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="h-8 w-8 p-0 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                             >
-                              <MapPin className="h-4 w-4 mr-2" />
-                              Open in Maps
+                              <MoreHorizontal className="h-4 w-4" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white" align="end">
+                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                            <DropdownMenuSeparator className="bg-gray-200 dark:bg-gray-700" />
+                            <DropdownMenuItem className="hover:bg-gray-100 dark:hover:bg-gray-700">
+                              <Eye className="h-4 w-4 mr-2" />
+                              View Details
                             </DropdownMenuItem>
-                          )}
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-                    </div>
-                  </CardHeader>
+                            <DropdownMenuItem
+                              className="hover:bg-gray-100 dark:hover:bg-gray-700"
+                              onClick={() => handleCallUser(req.phone)}
+                            >
+                              <Phone className="h-4 w-4 mr-2" />
+                              Call User
+                            </DropdownMenuItem>
+                            {hasLocation && (
+                              <DropdownMenuItem
+                                className="hover:bg-gray-100 dark:hover:bg-gray-700"
+                                onClick={() => handleOpenMaps(req.location!.coordinates)}
+                              >
+                                <MapPin className="h-4 w-4 mr-2" />
+                                Open in Maps
+                              </DropdownMenuItem>
+                            )}
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </div>
+                    </CardHeader>
 
-                  <CardContent className="space-y-4 py-0">
-                    {/* Contact Info */}
-                    <div className="flex items-center text-sm p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-200">
-                      <Phone className="h-4 w-4 mr-3 text-blue-500 shrink-0" />
-                      <div className="flex-1">
+                    <CardContent className="space-y-4 py-0">
+                      {/* Contact Info */}
+                      <div className="flex items-center text-sm p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-200">
+                        <Phone className="h-4 w-4 mr-3 text-blue-500 shrink-0" />
                         <a
                           href={`tel:${req.phone}`}
                           className="font-medium hover:underline text-blue-700 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200"
@@ -472,61 +472,55 @@ export default function AdminConnectRequestManagementPage() {
                           {req.phone}
                         </a>
                       </div>
-                    </div>
 
-                    {/* Message */}
-                    {req.message && (
-                      <div className="flex items-start text-sm p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200">
-                        <MessageSquare className="h-4 w-4 mr-3 mt-0.5 shrink-0 text-gray-600 dark:text-gray-400" />
-                        <p className="leading-relaxed line-clamp-3">{req.message}</p>
-                      </div>
-                    )}
-
-                    {/* Audio */}
-                    {req.audioUrl && (
-                      <div className="space-y-2">
-                        <div className="flex items-center text-sm px-1 text-gray-700 dark:text-gray-300">
-                          <MessageSquare className="h-4 w-4 mr-2 text-orange-500" />
-                          <span className="font-medium">Voice Message</span>
+                      {/* Message */}
+                      {req.message && (
+                        <div className="flex items-start text-sm p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200">
+                          <MessageSquare className="h-4 w-4 mr-3 mt-0.5 shrink-0 text-gray-600 dark:text-gray-400" />
+                          <p className="leading-relaxed line-clamp-3">{req.message}</p>
                         </div>
-                        <div className="rounded-lg p-3 border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700">
-                          <audio
-                            controls
-                            className="w-full h-8"
-                            src={req.audioUrl}
-                          >
-                            Your browser does not support the audio element.
-                          </audio>
-                        </div>
-                      </div>
-                    )}
+                      )}
 
-                    {/* Embedded Map */}
-                    {hasLocation && (
-                      <div className="space-y-2">
-                        <div className="flex items-center text-sm px-1 text-gray-700 dark:text-gray-300">
-                          <MapPin className="h-4 w-4 mr-2 text-green-500" />
-                          <span className="font-medium">Location</span>
-                          {req.location?.accuracy && (
-                            <span className="text-xs ml-2 text-gray-500 dark:text-gray-400">
-                              (Accuracy: {req.location?.accuracy.toFixed(0)}m)
-                            </span>
+                      {/* Audio */}
+                      {req.audioUrl && (
+                        <div className="space-y-2">
+                          <div className="flex items-center text-sm px-1 text-gray-700 dark:text-gray-300">
+                            <MessageSquare className="h-4 w-4 mr-2 text-orange-500" />
+                            <span className="font-medium">Voice Message</span>
+                          </div>
+                          <div className="rounded-lg p-3 border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700">
+                            <audio controls className="w-full h-8" src={req.audioUrl} />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Location */}
+                      {hasLocation && (
+                        <div className="space-y-2">
+                          <div className="flex items-center text-sm px-1 text-gray-700 dark:text-gray-300">
+                            <MapPin className="h-4 w-4 mr-2 text-green-500" />
+                            <span className="font-medium">Location</span>
+                            {req.location?.accuracy && (
+                              <span className="text-xs ml-2 text-gray-500 dark:text-gray-400">
+                                (Accuracy: {req.location?.accuracy.toFixed(0)}m)
+                              </span>
+                            )}
+                          </div>
+                          {mapUrl && (
+                            <div className="relative h-32 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+                              <MapsEmbedder mapUrl={mapUrl} />
+                            </div>
+                          )}
+                          {req.address && (
+                            <p className="text-xs text-gray-600 dark:text-gray-400">
+                              📍 {req.address}
+                            </p>
                           )}
                         </div>
-                        {mapUrl && (
-                          <div className="relative h-32 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
-                            <MapsEmbedder mapUrl={mapUrl} />
-                          </div>
-                        )}
-                        {req.address && (
-                          <p className="text-xs text-gray-600 dark:text-gray-400">
-                            📍 {req.address}
-                          </p>
-                        )}
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
               );
             })}
           </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { ThemeToggler } from '../togglers/ThemeToggler';
 import { Button } from '../ui/button';
@@ -19,11 +19,15 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children, user }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleLogout = async () => {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
-      router.push('/admin/login');
+      // determine current locale from pathname and redirect to locale-aware login
+      const segments = pathname?.split('/') || [];
+      const locale = segments[1] || 'en';
+      router.push(`/${locale}/admin/login`);
     } catch (error) {
       console.error('Logout error:', error);
     }

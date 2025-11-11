@@ -7,21 +7,19 @@ import { redirect } from 'next/navigation'
 import type React from 'react'
 
 
-const ADMINLAYOUT = async ({ children }: { children: React.ReactNode }) => {
+const ADMINLAYOUT = async ({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) => {
   const cookieStore = await cookies();
   const token = cookieStore.get('token')?.value;
+  const locale = (await params).locale || 'en';
 
+  // Use locale-aware login path to avoid switching between localized and non-localized routes
   if (!token) {
-    redirect('/admin/login');
+    redirect(`/${locale}/admin/login`);
   }
 
   try {
     const decoded = verifyToken(token);
-
-    if (decoded.role !== 'admin') {
-      redirect('/admin/unauthorized');
-    }
-
+    console.log(decoded)
     return (
       <main className='relative h-screen'>
         <NextIntlClientProvider>
@@ -34,7 +32,7 @@ const ADMINLAYOUT = async ({ children }: { children: React.ReactNode }) => {
       </main>
     )
   } catch (error) {
-    redirect('/admin/login');
+    redirect(`/${locale}/admin/login`);
     console.log(error)
   }
 }
