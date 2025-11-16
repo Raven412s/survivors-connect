@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { FileText, ExternalLink, BookOpen, Film, Award, Users } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Link from "next/link";
 
 export default function Publications({ className }: { className?: string }) {
   const t = useTranslations('ResearchPublications.Publications');
@@ -103,24 +104,24 @@ export default function Publications({ className }: { className?: string }) {
               <div className="bg-card border border-border rounded-xl p-6">
                 <h4 className="font-semibold text-foreground mb-4">{t('Blogs-Media.Blog-Posts.Title')}</h4>
                 <div className="space-y-3">
-                  <a href="#" className="block p-3 hover:bg-muted rounded-lg transition-colors group">
+                  <Link href="https://testimonialhealing.blogspot.com/2025/07/healing-through-honour-ceremony-of.html" target="_blank" className="block p-3 hover:bg-muted rounded-lg transition-colors group">
                     <div className="flex items-center justify-between">
                       <span className="text-foreground group-hover:text-primary">{t('Blogs-Media.Blog-Posts.Post-1')}</span>
                       <ExternalLink className="w-4 h-4 text-muted-foreground" />
                     </div>
-                  </a>
-                  <a href="#" className="block p-3 hover:bg-muted rounded-lg transition-colors group">
+                  </Link>
+                  <Link href="https://pvchr.blogspot.com/search?q=Towards+a+Torture-Free+Society%3A+A+Call+for+Justice%2C+Humanity%2C+and+Reform" target="_blank" className="block p-3 hover:bg-muted rounded-lg transition-colors group">
                     <div className="flex items-center justify-between">
                       <span className="text-foreground group-hover:text-primary">{t('Blogs-Media.Blog-Posts.Post-2')}</span>
                       <ExternalLink className="w-4 h-4 text-muted-foreground" />
                     </div>
-                  </a>
-                  <a href="#" className="block p-3 hover:bg-muted rounded-lg transition-colors group">
+                  </Link>
+                  <Link href="https://pvchr.blogspot.com/search?q=Brick+Kiln+Bondage+in+Varanasi" target="_blank" className="block p-3 hover:bg-muted rounded-lg transition-colors group">
                     <div className="flex items-center justify-between">
                       <span className="text-foreground group-hover:text-primary">{t('Blogs-Media.Blog-Posts.Post-3')}</span>
                       <ExternalLink className="w-4 h-4 text-muted-foreground" />
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="mt-4 text-sm text-muted-foreground">
                   {t('Blogs-Media.Blog-Posts.Total-Posts')}

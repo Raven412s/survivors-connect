@@ -1,9 +1,10 @@
 // impact-section.tsx
-
+"use client"
 import { cn } from "@/lib/utils";
 import React from "react";
 import { Users, Heart, Award, Target } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import { handleJoin } from "@/lib/actions";
 
 export default function ImpactSection({ className }: { className?: string }) {
   const t = useTranslations('HomePage.Impact-Section');
@@ -43,7 +44,7 @@ export default function ImpactSection({ className }: { className?: string }) {
         </div>
 
         <div className="text-center mt-12">
-          <button className="px-8 py-3 bg-foreground text-background rounded-lg font-semibold hover:bg-foreground/90 transition-all duration-200">
+          <button onClick={() => handleJoin()} className="px-8 py-3 bg-foreground text-background rounded-lg font-semibold hover:bg-foreground/90 transition-all duration-200">
             {t('Join-Button')}
           </button>
         </div>

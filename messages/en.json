@@ -11,7 +11,7 @@
     "Research-And-Publications": "Research & publications",
     "News-And-Media": "News & Media",
     "Resources": "Resources",
-    "Donate-And-Support": "Donate & Support"
+    "Comprehensive-Report": "Comprehensive Report"
   },
   "Navbar": {
     "Logo": {
@@ -1726,6 +1726,57 @@
       },
       "Image-Placeholder": {
         "Viacam-Studio": "Image: Viacam Productions studio, team, or production work"
+      }
+    }
+  },
+  "ResourcesPage": {
+    "Meta": {
+      "Title": "Resources | Survivor Connect",
+      "Description": "Comprehensive collection of resources including websites, knowledge products, publications, blogs, videos, and support materials from Survivor Connect and Jan Mitra Nyas."
+    },
+    "Hero": {
+      "Title": "Resources & Knowledge Hub",
+      "Description": "Access a comprehensive collection of resources, knowledge products, and support materials from Survivor Connect and Jan Mitra Nyas.",
+      "Subtitle": "Explore our websites, blogs, videos, publications, and support services designed to empower survivors."
+    },
+    "Sections": {
+      "OrganizationalWebsites": {
+        "Title": "Organizational Websites",
+        "Description": "Official platforms and digital presence of our organization and partner initiatives."
+      },
+      "KnowledgeResources": {
+        "Title": "Knowledge & Learning Resources",
+        "Description": "Blogs, articles, and educational content focused on healing, advocacy, and survivor empowerment."
+      },
+      "MultimediaResources": {
+        "Title": "Multimedia Resources",
+        "Description": "Video content, podcasts, and audio materials featuring survivor stories and expert insights."
+      },
+      "Reports": {
+        "Title": "Reports & Documentation",
+        "Description": "Annual reports, comprehensive reports, and organizational documentation detailing our impact and work."
+      },
+      "Reference": {
+        "Title": "Reference Resources",
+        "Description": "Verified external resources providing additional information about our organization and work."
+      },
+      "SupportResources": {
+        "Title": "Support Resource Categories",
+        "Description": "Organized categories linking to mental health support, legal aid, and research materials."
+      },
+      "Social": {
+        "Title": "Connect With Us on Social Media",
+        "Description": "Follow us on various social media platforms for updates, stories, and community engagement."
+      },
+      "QuickLinks": {
+        "Title": "Quick Copy Links",
+        "Description": "Easily copy and share our important links with others."
+      },
+      "CTA": {
+        "Title": "Ready to Take Action?",
+        "Description": "Whether you need support, want to get involved, or have questions, we're here to help. Reach out to us today.",
+        "ContactButton": "Contact Us",
+        "InvolvedButton": "Get Involved"
       }
     }
   }

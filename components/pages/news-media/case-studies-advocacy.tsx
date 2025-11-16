@@ -47,7 +47,7 @@ export default function CaseStudiesAdvocacy({ className }: { className?: string 
 
               <blockquote className="border-l-4 border-blue-600 pl-4 mb-6">
                 <p className="text-lg italic text-muted-foreground">
-                  &qout;{t('Social-Media.Quote')}&qout;
+                  &quot;{t('Social-Media.Quote')}&quot;
                 </p>
               </blockquote>
 

@@ -1,4 +1,6 @@
 // components/pages/events-activities/upcoming-events.tsx
+"use client"
+import { handleGotoFooter } from "@/lib/actions";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Calendar, Target } from "lucide-react";
 import { useTranslations } from 'next-intl';
@@ -118,7 +120,7 @@ export default function UpcomingEvents({ className }: { className?: string }) {
             <p className="text-muted-foreground mb-6 max-w-2xl">
               {t('CTADescription')}
             </p>
-            <button className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 transform hover:scale-105">
+            <button onClick={()=> handleGotoFooter()} className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 transform hover:scale-105">
               {t('StayUpdated')}
               <ArrowRight className="w-4 h-4" />
             </button>

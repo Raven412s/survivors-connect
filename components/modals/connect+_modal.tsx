@@ -13,7 +13,7 @@ import { useState } from "react";
 import ConnectPlus from "../buttons/connect-plus";
 import ConnectRequestForm from "../forms/connect-request-form";
 
-export default function ConnectPlusModal() {
+export default function ConnectPlusModal({children}: {children?: React.ReactNode}) {
   const [open, setOpen] = useState(false);
 
   const handleSuccess = () => {
@@ -24,7 +24,7 @@ export default function ConnectPlusModal() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <div>
-          <ConnectPlus handleClick={() => setOpen(true)} />
+          {children? children : <ConnectPlus handleClick={() => setOpen(true)} />}
         </div>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[625px] max-h-[99vh] my-auto z-60 w-full overflow-y-auto no-scrollbar">

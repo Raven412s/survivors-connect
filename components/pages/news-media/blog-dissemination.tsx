@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Calendar, ExternalLink, Eye, FileText } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Link from "next/link";
 
 export default function BlogDissemination({ className }: { className?: string }) {
   const t = useTranslations('NewsMedia.Blog-Dissemination');
@@ -112,16 +113,16 @@ export default function BlogDissemination({ className }: { className?: string })
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: t('Source-Links.JMN-Website'), url: '#' },
-              { name: t('Source-Links.PVCHR-Blog'), url: '#' },
-              { name: t('Source-Links.Testimonial-Blog'), url: '#' },
-              { name: t('Source-Links.YouTube'), url: '#' },
-              { name: t('Source-Links.Project-Website'), url: '#' }
+              { name: t('Source-Links.JMN-Website'), url: 'https://janmitranyas.in' },
+              { name: t('Source-Links.PVCHR-Blog'), url: 'https://pvchr.blogspot.com' },
+              { name: t('Source-Links.Testimonial-Blog'), url: 'https://testimonialhealing.blogspot.com' },
+              { name: t('Source-Links.YouTube'), url: 'https://www.youtube.com/user/pvchrindia' },
+              { name: t('Source-Links.Project-Website'), url: 'https://www.survivorconnect.org' }
             ].map((link, index) => (
-              <a key={index} href={link.url} className="flex items-center gap-3 p-3 hover:bg-white/50 dark:hover:bg-white/10 rounded-lg transition-colors group">
+              <Link key={index} href={link.url} target="_blank" className="flex items-center gap-3 p-3 hover:bg-white/50 dark:hover:bg-white/10 rounded-lg transition-colors group">
                 <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
                 <span className="text-foreground group-hover:text-primary font-medium">{link.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

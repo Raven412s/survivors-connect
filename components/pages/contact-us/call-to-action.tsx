@@ -1,7 +1,10 @@
 // components/pages/contact-us/call-to-action.tsx
+"use client"
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
 import { Heart, Users, Shield, ArrowRight } from "lucide-react";
+import { handleJoin, handleViewPublicTestimonials } from "@/lib/actions";
+import Link from "next/link";
 
 export default function CallToAction({ className }: { className?: string }) {
   const t = useTranslations('ContactUsPage.CallToAction');
@@ -84,7 +87,7 @@ export default function CallToAction({ className }: { className?: string }) {
               <p className="text-muted-foreground mb-4">
                 {t('ArchiveDescription')}
               </p>
-              <button className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200">
+              <button onClick={()=>handleViewPublicTestimonials()} className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200">
                 {t('ExploreStories')}
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -126,12 +129,12 @@ export default function CallToAction({ className }: { className?: string }) {
                 {t('CollaborationCTA.Description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200">
+                <button onClick={()=>handleJoin()} className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200">
                   {t('CollaborationCTA.PartnerButton')}
                 </button>
-                <button className="px-8 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors duration-200">
+                <Link href={"/get-involved"}  className="px-8 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors duration-200">
                   {t('CollaborationCTA.LearnMoreButton')}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

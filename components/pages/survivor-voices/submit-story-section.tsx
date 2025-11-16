@@ -27,7 +27,7 @@ export default function SubmitStorySection({ className }: { className?: string }
     };
 
     return (
-        <section className={cn("w-full py-20 px-6 md:px-16 bg-background", className)}>
+        <section id="public-testimony-form" className={cn("w-full py-20 px-6 md:px-16 bg-background", className)}>
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="text-center space-y-6 mb-12">

@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <div
       className={cn(
-        "sticky top-2 md:top-0 md:m-0 m-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-60 bg-accent/20 md:bg-accent border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
+        "sticky top-2 md:top-0 md:m-0 m-2 md:inset-x-0 rounded-lg md:rounded-none h-16 z-60 bg-muted border-3 md:border-none text-accent-foreground backdrop-blur-xs md:backdrop-blur-none shadow-lg"
       )}
       id="navbar"
     >
@@ -83,7 +83,7 @@ export default function Navbar() {
                   { href: "/research-publications", label: `${tLinks("Research-And-Publications")}` },
                   { href: "/news-media", label: `${tLinks("News-And-Media")}` },
                   { href: "/resources", label: `${tLinks("Resources")}` },
-                  { href: "/donate-support", label: `${tLinks("Donate-And-Support")}` },
+                  { href: "https://janmitranyas.in/report.html", label: `${tLinks("Comprehensive-Report")}`},
                 ].map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
@@ -135,7 +135,7 @@ export default function Navbar() {
                     { href: "/research-publications", label: `${tLinks("Research-And-Publications")}` },
                     { href: "/news-media", label: `${tLinks("News-And-Media")}` },
                     { href: "/resources", label: `${tLinks("Resources")}` },
-                    { href: "/donate-support", label: `${tLinks("Donate-And-Support")}` },
+                    { href: "https://janmitranyas.in/report.html", label: `${tLinks("Comprehensive-Report")}` },
                   ].map((link) => (
                     <SheetClose asChild key={link.href}>
                       <Link

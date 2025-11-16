@@ -19,7 +19,6 @@ const ADMINLAYOUT = async ({ children, params }: { children: React.ReactNode; pa
 
   try {
     const decoded = verifyToken(token);
-    console.log(decoded)
     return (
       <main className='relative h-screen'>
         <NextIntlClientProvider>

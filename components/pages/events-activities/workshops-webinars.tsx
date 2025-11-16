@@ -113,9 +113,9 @@ export default function WorkshopsWebinars({ className }: { className?: string })
                     <span className="text-xs bg-green-100 dark:bg-green-800/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full">
                       {workshop.status}
                     </span>
-                    <button className="text-xs bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition-colors">
+                    {/* <button className="text-xs bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition-colors">
                       {t('RegisterButton')}
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}

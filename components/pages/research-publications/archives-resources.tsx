@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { Archive, Download, ExternalLink, FileText, Database } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Link from "next/link";
 
 export default function ArchivesResources({ className }: { className?: string }) {
   const t = useTranslations('ResearchPublications.Archives-Resources');
@@ -39,7 +40,7 @@ export default function ArchivesResources({ className }: { className?: string })
 
             <div className="bg-card border border-border rounded-2xl p-6">
               <div className="space-y-4">
-                <a href="#" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
+                <Link href="https://janmitranyas.in/report.html" target="_blank" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
                   <div className="flex items-center gap-3">
                     <FileText className="w-5 h-5 text-blue-600" />
                     <span className="text-foreground group-hover:text-primary font-medium">
@@ -47,9 +48,9 @@ export default function ArchivesResources({ className }: { className?: string })
                     </span>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                </a>
+                </Link>
 
-                <a href="#" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
+                <Link href="https://janmitranyas.in/report.html" target="_blank" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
                   <div className="flex items-center gap-3">
                     <Download className="w-5 h-5 text-green-600" />
                     <div>
@@ -62,7 +63,7 @@ export default function ArchivesResources({ className }: { className?: string })
                     </div>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                </a>
+                </Link>
               </div>
 
               <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -85,7 +86,7 @@ export default function ArchivesResources({ className }: { className?: string })
 
             <div className="bg-card border border-border rounded-2xl p-6">
               <div className="space-y-4">
-                <a href="#" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
+                <Link href="https://pvchr.blogspot.com" target="_blank" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
                   <div className="flex items-center gap-3">
                     <FileText className="w-5 h-5 text-purple-600" />
                     <div>
@@ -98,9 +99,9 @@ export default function ArchivesResources({ className }: { className?: string })
                     </div>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                </a>
+                </Link>
 
-                <a href="#" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
+                <Link href="https://testimonialhealing.blogspot.com" target="_blank" className="flex items-center justify-between p-4 hover:bg-muted rounded-lg transition-colors group">
                   <div className="flex items-center gap-3">
                     <FileText className="w-5 h-5 text-orange-600" />
                     <div>
@@ -113,7 +114,7 @@ export default function ArchivesResources({ className }: { className?: string })
                     </div>
                   </div>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                </a>
+                </Link>
               </div>
 
               <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-800">

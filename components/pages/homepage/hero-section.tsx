@@ -1,12 +1,15 @@
 // hero-section.tsx
+"use client"
+import ConnectPlusModal from '@/components/modals/connect+_modal';
 import { Button } from '@/components/ui/button';
+import { handleJoin, handleShareTestimony } from '@/lib/actions';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import React from 'react'
 
 export default function HeroSection({ className }: { className?: string }) {
     const t = useTranslations('HomePage.Hero-Section');
-
+   
     return (
         <div className={cn("relative flex flex-col items-center justify-center min-h-[90vh]  overflow-hidden", className)}>
             {/* Background Gradient */}
@@ -30,13 +33,15 @@ export default function HeroSection({ className }: { className?: string }) {
                     </div>
                     {/* CTA Buttons */}
                     <div className=" flex flex-col sm:flex-row gap-4 mt-8">
-                        <Button variant={"default"} className="px-8 py-3 bg-foreground text-background rounded-lg font-semibold hover:bg-foreground/90 transition-all duration-200 transform hover:scale-105">
-                            {t("Get-Help-Btn")}
-                        </Button>
-                        <Button variant={"outline"} className="px-8 py-3 border border-border text-foreground rounded-lg font-semibold hover:bg-muted transition-all duration-200">
+                        <ConnectPlusModal>
+                            <Button variant={"default"} className="px-8 py-3 bg-foreground text-background rounded-lg font-semibold hover:bg-foreground/90 transition-all duration-200 transform hover:scale-105">
+                                {t("Get-Help-Btn")}
+                            </Button>
+                        </ConnectPlusModal>
+                        <Button onClick={() => handleShareTestimony()} variant={"outline"} className="px-8 py-3 border border-border text-foreground rounded-lg font-semibold hover:bg-muted transition-all duration-200">
                             {t("Share-Testimony-Btn")}
                         </Button>
-                        <Button variant={"outline"} className="px-8 py-3 border border-border text-foreground rounded-lg font-semibold hover:bg-muted transition-all duration-200">
+                        <Button onClick={() => handleJoin()} variant={"outline"} className="px-8 py-3 border border-border text-foreground rounded-lg font-semibold hover:bg-muted transition-all duration-200">
                             {t("Join-Community-Btn")}
                         </Button>
                     </div>

@@ -14,6 +14,7 @@ import {
   MapPin
 } from "lucide-react";
 import SafeExitButton from "../buttons/safe-exit";
+import MoveToTopButton from "../buttons/move-to-top-button";
 
 export function Footer() {
   const t = useTranslations("Footer");
@@ -31,7 +32,7 @@ export function Footer() {
     { href: "/research-publications", label: tLinks("Research-And-Publications") },
     { href: "/news-media", label: tLinks("News-And-Media") },
     { href: "/resources", label: tLinks("Resources") },
-    { href: "/donate-support", label: tLinks("Donate-And-Support") },
+    { href: "https://janmitranyas.in/report.html", label: tLinks("Comprehensive-Report")},
   ];
 
   const supportLinks = [
@@ -58,7 +59,7 @@ export function Footer() {
     },
     {
       name: "YouTube",
-      href: "https://youtube.com/survivorconnect",
+      href: "https://www.youtube.com/user/pvchrindia",
       icon: Youtube,
     },
   ];
@@ -82,7 +83,8 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-background border-t border-border mb-16 md:mb-0">
+    <footer id="footer" className="relative bg-background border-t border-border mb-16 md:mb-0">
+      <MoveToTopButton/>
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

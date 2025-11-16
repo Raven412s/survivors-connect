@@ -95,7 +95,7 @@ export default function VolunteerInternship({ className }: { className?: string 
   };
   return (
     <>
-      <section className={cn("w-full py-20 px-6 md:px-16 bg-muted/30", className)}>
+      <section id="join-volunteer" className={cn("w-full py-20 px-6 md:px-16 bg-muted/30", className)}>
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
