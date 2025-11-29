@@ -3,14 +3,18 @@
 
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
-import { Users, Heart, Cpu, Network } from "lucide-react";
-import { useState } from 'react';
+import { Users, Heart, Cpu, Network, CheckCircle } from "lucide-react";
+import { useState, useEffect } from 'react';
 import { ApplicationModal } from "@/components/modals/application-modal";
 
 export default function ProfessionalPartners({ className }: { className?: string }) {
   const t = useTranslations('GetInvolvedPage.ProfessionalPartners');
   const tModal = useTranslations('GetInvolvedPage.Modals.ProfessionalNetwork');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,16 +59,73 @@ export default function ProfessionalPartners({ className }: { className?: string
     tModal('Professions.Other')
   ];
 
+  // Auto-close success message after 5 seconds
+  useEffect(() => {
+    if (submitSuccess) {
+      const timer = setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitSuccess]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with backend API
-    console.log('Professional partner application:', formData);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Close modal and reset form
+    setIsSubmitting(true);
+    setSubmitError(null);
+    setSubmitSuccess(false);
+
+    try {
+      const response = await fetch('/api/professional-partners/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit application');
+      }
+
+      // Success
+      setSubmitSuccess(true);
+      setIsModalOpen(false);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        profession: '',
+        expertise: '',
+        experience: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear errors when user starts typing
+    if (submitError) setSubmitError(null);
+  };
+
+  const handleCloseModal = () => {
     setIsModalOpen(false);
+    setSubmitError(null);
+    setSubmitSuccess(false);
+  };
+
+  const resetForm = () => {
     setFormData({
       name: '',
       email: '',
@@ -73,15 +134,39 @@ export default function ProfessionalPartners({ className }: { className?: string
       experience: '',
       message: ''
     });
-    
-    // Show success message (you can replace with toast notification)
-    alert('Thank you for your application! We will contact you soon.');
+    setSubmitError(null);
+    setSubmitSuccess(false);
   };
 
   return (
     <>
       <section className={cn("w-full py-20 px-6 md:px-16 bg-background", className)}>
         <div className="max-w-6xl mx-auto">
+          {/* Success Message Banner */}
+          {submitSuccess && (
+            <div className="fixed bottom-4 right-4 left-4 md:left-auto md:right-4 md:w-96 z-999 animate-in slide-in-from-top duration-300">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-green-800">
+                      Application Submitted Successfully!
+                    </p>
+                    <p className="text-xs text-green-600 mt-1">
+                      Thank you for your application! We will review it and contact you soon.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setSubmitSuccess(false)}
+                    className="text-green-600 hover:text-green-800 transition-colors"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl font-bold text-foreground">
@@ -154,7 +239,10 @@ export default function ProfessionalPartners({ className }: { className?: string
 
               {/* CTA Button */}
               <button 
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  resetForm();
+                  setIsModalOpen(true);
+                }}
                 className="w-full py-4 bg-primary text-primary-foreground rounded-2xl font-semibold hover:bg-primary/90 transition-all duration-200 transform hover:scale-105"
               >
                 {t('JoinButton')}
@@ -165,12 +253,18 @@ export default function ProfessionalPartners({ className }: { className?: string
       </section>
 
       {/* Application Modal */}
-     <ApplicationModal
+      <ApplicationModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={handleCloseModal}
         title={tModal('Title')}
       >
         <form onSubmit={handleSubmit} className="space-y-4">
+          {submitError && (
+            <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-sm text-red-800">{submitError}</p>
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-medium text-foreground mb-1">
               {tModal('Form.Name')} *
@@ -179,9 +273,10 @@ export default function ProfessionalPartners({ className }: { className?: string
               type="text"
               required
               value={formData.name}
-              onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              onChange={(e) => handleInputChange('name', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.NamePlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -193,9 +288,10 @@ export default function ProfessionalPartners({ className }: { className?: string
               type="email"
               required
               value={formData.email}
-              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              onChange={(e) => handleInputChange('email', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.EmailPlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -206,8 +302,9 @@ export default function ProfessionalPartners({ className }: { className?: string
             <select
               required
               value={formData.profession}
-              onChange={(e) => setFormData(prev => ({ ...prev, profession: e.target.value }))}
+              onChange={(e) => handleInputChange('profession', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
+              disabled={isSubmitting}
             >
               <option value="">{tModal('Form.ProfessionPlaceholder')}</option>
               {professions.map(profession => (
@@ -223,9 +320,10 @@ export default function ProfessionalPartners({ className }: { className?: string
             <input
               type="text"
               value={formData.expertise}
-              onChange={(e) => setFormData(prev => ({ ...prev, expertise: e.target.value }))}
+              onChange={(e) => handleInputChange('expertise', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.ExpertisePlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -236,9 +334,10 @@ export default function ProfessionalPartners({ className }: { className?: string
             <input
               type="number"
               value={formData.experience}
-              onChange={(e) => setFormData(prev => ({ ...prev, experience: e.target.value }))}
+              onChange={(e) => handleInputChange('experience', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.ExperiencePlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -249,17 +348,26 @@ export default function ProfessionalPartners({ className }: { className?: string
             <textarea
               rows={4}
               value={formData.message}
-              onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+              onChange={(e) => handleInputChange('message', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background resize-none"
               placeholder={tModal('Form.MotivationPlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+            disabled={isSubmitting}
+            className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
-            {tModal('Form.Submit')}
+            {isSubmitting ? (
+              <>
+                <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                {tModal('Form.Submitting')}
+              </>
+            ) : (
+              tModal('Form.Submit')
+            )}
           </button>
         </form>
       </ApplicationModal>

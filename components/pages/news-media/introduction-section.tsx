@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { Newspaper, Megaphone, Users, Target } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 export default function IntroductionSection({ className }: { className?: string }) {
   const t = useTranslations('NewsMedia.Introduction-Section');
@@ -89,13 +90,8 @@ export default function IntroductionSection({ className }: { className?: string 
           </div>
 
           {/* Image Placeholder - Media Coverage */}
-          <div className="bg-muted rounded-2xl p-8 border border-border h-80 flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <Newspaper className="w-16 h-16 text-muted-foreground mx-auto" />
-              <p className="text-muted-foreground italic">
-                {t('Image-Placeholder.Media-Coverage')}
-              </p>
-            </div>
+          <div className="bg-muted rounded-2xl p-8 border border-border h-80 flex relative overflow-hidden items-center justify-center">
+            <Image src={'/images/media-coverage/1.jpeg'} alt="media coverage" fill/>
             {/* Replace with actual image of media coverage, press events, or award ceremonies */}
           </div>
         </div>

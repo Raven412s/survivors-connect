@@ -2,10 +2,11 @@
 import { cn } from "@/lib/utils";
 import { Calendar, FileText, MessageCircle, Shield, Users } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 export default function CaseStudiesAdvocacy({ className }: { className?: string }) {
   const t = useTranslations('NewsMedia.Case-Studies-Advocacy');
-  
+
   return (
     <section
       className={cn(
@@ -76,11 +77,11 @@ export default function CaseStudiesAdvocacy({ className }: { className?: string 
                   <h3 className="text-2xl font-bold text-foreground">{t('Ghasia-Adivasis.Title')}</h3>
                 </div>
               </div>
-              
+
               <p className="text-muted-foreground mb-6">
                 {t('Ghasia-Adivasis.Description')}
               </p>
-              
+
               <div className="flex items-center gap-2 text-sm text-foreground">
                 <Shield className="w-4 h-4 text-green-600" />
                 {t('Ghasia-Adivasis.Emergency-Intervention')}
@@ -140,14 +141,9 @@ export default function CaseStudiesAdvocacy({ className }: { className?: string 
         </div>
 
         {/* Image Placeholder - Advocacy in Action */}
-        <div className="mt-16 bg-muted rounded-2xl p-8 border border-border h-64 flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <Users className="w-12 h-12 text-muted-foreground mx-auto" />
-            <p className="text-muted-foreground italic">
-              {t('Image-Placeholder.Advocacy-Action')}
-            </p>
-          </div>
-          {/* Replace with actual image from advocacy events, community meetings, or legal interventions */}
+        <div className="mt-16 bg-muted rounded-2xl p-8 border border-border h-64 relative overflow-hidden  flex items-center justify-center">
+          <Image src={'/images/media-coverage/3.jpeg'} alt="award-ceremony" fill className="object-cover" />
+          {/* Replace with actual image from Health Icon Awards ceremony or documentary screening */}
         </div>
       </div>
     </section>

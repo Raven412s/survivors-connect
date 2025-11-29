@@ -38,6 +38,8 @@ export interface TestimonySubmission {
   type: TestimonyType;
   mediaFile?: File;
   isAnonymous: boolean;
+  authorName?: string;
+  tags: string[];
   survivorDemographics?: {
     age?: number;
     community?: string;

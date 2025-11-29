@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { Award, Film, Users, Globe, Calendar } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 export default function HighlightsRecognition({ className }: { className?: string }) {
   const t = useTranslations('NewsMedia.Highlights-Recognition');
@@ -149,13 +150,8 @@ export default function HighlightsRecognition({ className }: { className?: strin
         </div>
 
         {/* Image Placeholder - Award Ceremony */}
-        <div className="mt-16 bg-muted rounded-2xl p-8 border border-border h-64 flex items-center justify-center">
-          <div className="text-center space-y-4">
-            <Award className="w-12 h-12 text-muted-foreground mx-auto" />
-            <p className="text-muted-foreground italic">
-              {t('Image-Placeholder.Award-Ceremony')}
-            </p>
-          </div>
+        <div className="mt-16 bg-muted rounded-2xl p-8 border border-border h-64 relative overflow-hidden  flex items-center justify-center">
+          <Image src={'/images/media-coverage/2.jpeg'} alt="award-ceremony" fill className="object-cover object-bottom "/>
           {/* Replace with actual image from Health Icon Awards ceremony or documentary screening */}
         </div>
       </div>

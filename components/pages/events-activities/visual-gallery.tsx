@@ -1,7 +1,8 @@
 // components/pages/events-activities/visual-gallery.tsx
 import { cn } from "@/lib/utils";
+import { Award, Camera, Heart, Users } from "lucide-react";
 import { useTranslations } from 'next-intl';
-import { ImageIcon, Users, Heart, Award, Camera } from "lucide-react";
+import Image from "next/image";
 
 export default function VisualGallery({ className }: { className?: string }) {
   const t = useTranslations('EventsActivitiesPage.VisualGallery');
@@ -13,23 +14,26 @@ export default function VisualGallery({ className }: { className?: string }) {
       description: t('GalleryItems.TestimonialTherapy.Description'),
       date: "April 10, 2025",
       location: "Koderma, Jharkhand",
-      icon: Heart
+      icon: Heart,
+      image: "/images/events/e1.png"
     },
     {
-      type: "engagement", 
+      type: "engagement",
       title: t('GalleryItems.FieldEngagement.Title'),
       description: t('GalleryItems.FieldEngagement.Description'),
       date: "April 11, 2025",
       location: "Koderma, Jharkhand",
-      icon: Users
+      icon: Users,
+      image: "/images/events/e2.png"
     },
     {
       type: "redress",
       title: t('GalleryItems.SeekingRedress.Title'),
       description: t('GalleryItems.SeekingRedress.Description'),
-      date: "June 26, 2025", 
+      date: "June 26, 2025",
       location: "Varanasi, India",
-      icon: Award
+      icon: Award,
+      image: "/images/events/e3.jpeg"
     },
     {
       type: "ceremony",
@@ -37,7 +41,8 @@ export default function VisualGallery({ className }: { className?: string }) {
       description: t('GalleryItems.HealingHonour.Description'),
       date: "July 12, 2025",
       location: "Community Center",
-      icon: Heart
+      icon: Heart,
+      image: "/images/events/e4.jpeg"
     },
     {
       type: "advocacy",
@@ -45,7 +50,8 @@ export default function VisualGallery({ className }: { className?: string }) {
       description: t('GalleryItems.CompassionateAdvocacy.Description'),
       date: "July 12, 2025",
       location: "Field Visit",
-      icon: Users
+      icon: Users,
+      image: "/images/events/e5.jpeg"
     },
     {
       type: "campaign",
@@ -53,7 +59,8 @@ export default function VisualGallery({ className }: { className?: string }) {
       description: t('GalleryItems.ReintegrationCeremony.Description'),
       date: "Ongoing",
       location: "Multiple locations",
-      icon: Award
+      icon: Award,
+      image: "/images/events/e6.png"
     }
   ];
 
@@ -66,11 +73,12 @@ export default function VisualGallery({ className }: { className?: string }) {
     },
     {
       title: t('Awards.YouthSelection.Title'),
-      description: t('Awards.YouthSelection.Description'), 
+      description: t('Awards.YouthSelection.Description'),
       date: "2025",
       organization: "May 18 Academy"
     }
   ];
+
 
   return (
     <section className={cn("w-full py-20 px-6 md:px-16 bg-background", className)}>
@@ -119,10 +127,15 @@ export default function VisualGallery({ className }: { className?: string }) {
                     </div>
 
                     {/* Placeholder for image */}
-                    <div className="mt-4 bg-muted rounded-lg aspect-video flex items-center justify-center group-hover:opacity-80 transition-opacity">
-                      <ImageIcon className="w-8 h-8 text-muted-foreground" />
-                      <span className="sr-only">Event photo placeholder</span>
+                    <div className="mt-4 bg-muted rounded-lg aspect-video relative overflow-hidden">
+                      <Image
+                        fill
+                        src={item.image}
+                        alt={item.title}
+                        className="object-cover object-center"
+                      />
                     </div>
+
                   </div>
                 );
               })}

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
 import { Send, User, Mail, Phone, MessageSquare, Shield } from "lucide-react";
 import { useState } from 'react';
+import { toast } from "sonner";
 
 export default function ContactFormSection({ className }: { className?: string }) {
   const t = useTranslations('ContactUsPage.ContactForm');
@@ -29,38 +30,45 @@ export default function ContactFormSection({ className }: { className?: string }
     { value: 'other', label: t('Categories.Other') }
   ];
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // TODO: Integrate with backend API
-    try {
-      console.log('Contact form submission:', formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        category: 'general',
-        isUrgent: false,
-        allowFollowUp: true
-      });
-      
-      // Show success message
-      alert(t('SuccessMessage'));
-    } catch (error) {
-      console.error('Form submission error:', error);
-      alert(t('ErrorMessage'));
-    } finally {
-      setIsSubmitting(false);
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      toast.error(data.message || t("ErrorMessage"));
+      return;
     }
-  };
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+      category: "general",
+      isUrgent: false,
+      allowFollowUp: true,
+    });
+
+    toast.success(t("SuccessMessage"));
+  } catch (error) {
+    console.error(error);
+    toast.error(t("ErrorMessage"));
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <section className={cn("w-full py-20 px-6 md:px-16 bg-muted/30", className)}>

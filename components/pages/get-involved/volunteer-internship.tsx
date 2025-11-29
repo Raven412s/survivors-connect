@@ -3,8 +3,8 @@
 
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
-import { GraduationCap, Users, Clock, Award } from "lucide-react";
-import { useState } from 'react';
+import { GraduationCap, Users, Clock, Award, CheckCircle } from "lucide-react";
+import { useState, useEffect } from 'react';
 import { ApplicationModal } from "@/components/modals/application-modal";
 
 type OpportunityType = 'volunteer' | 'internship' | 'youth-ambassador';
@@ -14,6 +14,10 @@ export default function VolunteerInternship({ className }: { className?: string 
   const tModal = useTranslations('GetInvolvedPage.Modals.VolunteerApplication');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOpportunity, setSelectedOpportunity] = useState<OpportunityType | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,28 +55,80 @@ export default function VolunteerInternship({ className }: { className?: string 
     }
   ];
 
+  // Auto-close success message after 5 seconds
+  useEffect(() => {
+    if (submitSuccess) {
+      const timer = setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitSuccess]);
+
   const handleApplyClick = (opportunityId: OpportunityType) => {
     setSelectedOpportunity(opportunityId);
     setIsModalOpen(true);
+    setSubmitError(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!selectedOpportunity) return;
 
-    // TODO: Integrate with backend API
-    console.log('Application submitted:', {
-      opportunity: selectedOpportunity,
-      ...formData
-    });
+    setIsSubmitting(true);
+    setSubmitError(null);
+    setSubmitSuccess(false);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/volunteer-applications/apply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          opportunityType: selectedOpportunity,
+          ...formData
+        }),
+      });
 
-    // Close modal and reset form
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit application');
+      }
+
+      // Success
+      setSubmitSuccess(true);
+      setIsModalOpen(false);
+      setSelectedOpportunity(null);
+
+
+      // Reset form
+      resetForm();
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear errors when user starts typing
+    if (submitError) setSubmitError(null);
+  };
+
+  const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedOpportunity(null);
+    setSubmitError(null);
+  };
+
+  const resetForm = () => {
     setFormData({
       name: '',
       email: '',
@@ -82,10 +138,7 @@ export default function VolunteerInternship({ className }: { className?: string 
       availability: '',
       motivation: ''
     });
-
-    // Show success message
-    const opportunityTitle = opportunities.find(o => o.id === selectedOpportunity)?.title;
-    alert(`Thank you for applying to the ${opportunityTitle} program! We will review your application and contact you soon.`);
+    setSubmitError(null);
   };
 
   const getModalTitle = () => {
@@ -93,10 +146,42 @@ export default function VolunteerInternship({ className }: { className?: string 
     const opportunity = opportunities.find(o => o.id === selectedOpportunity);
     return tModal('Title', { opportunity: opportunity?.title || '' });
   };
+
+  const getSuccessMessage = () => {
+    if (!selectedOpportunity) return 'Application submitted successfully!';
+    const opportunity = opportunities.find(o => o.id === selectedOpportunity);
+    return `Thank you for applying to the ${opportunity?.title} program! We will review your application and contact you soon.`;
+  };
+
   return (
     <>
       <section id="join-volunteer" className={cn("w-full py-20 px-6 md:px-16 bg-muted/30", className)}>
         <div className="max-w-6xl mx-auto">
+          {/* Success Message Banner */}
+          {submitSuccess && (
+            <div className="fixed top-4 right-4 left-4 md:left-auto md:right-4 md:w-96 z-50 animate-in slide-in-from-top duration-300">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 shrink-0" />
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-green-800">
+                      Application Submitted Successfully!
+                    </p>
+                    <p className="text-xs text-green-600 mt-1">
+                      {getSuccessMessage()}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setSubmitSuccess(false)}
+                    className="text-green-600 hover:text-green-800 transition-colors"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl font-bold text-foreground">
@@ -142,7 +227,7 @@ export default function VolunteerInternship({ className }: { className?: string 
                 </div>
 
                 {/* Apply Button */}
-                <button 
+                <button
                   onClick={() => handleApplyClick(opportunity.id)}
                   className="w-full mt-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 text-sm"
                 >
@@ -164,16 +249,19 @@ export default function VolunteerInternship({ className }: { className?: string 
         </div>
       </section>
 
-         {/* Application Modal */}
+      {/* Application Modal */}
       <ApplicationModal
         isOpen={isModalOpen}
-        onClose={() => {
-          setIsModalOpen(false);
-          setSelectedOpportunity(null);
-        }}
+        onClose={handleCloseModal}
         title={getModalTitle()}
       >
         <form onSubmit={handleSubmit} className="space-y-4">
+          {submitError && (
+            <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-sm text-red-800">{submitError}</p>
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-medium text-foreground mb-1">
               {tModal('Form.Name')} *
@@ -182,9 +270,10 @@ export default function VolunteerInternship({ className }: { className?: string 
               type="text"
               required
               value={formData.name}
-              onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              onChange={(e) => handleInputChange('name', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.NamePlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -196,9 +285,10 @@ export default function VolunteerInternship({ className }: { className?: string 
               type="email"
               required
               value={formData.email}
-              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              onChange={(e) => handleInputChange('email', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.EmailPlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -209,9 +299,10 @@ export default function VolunteerInternship({ className }: { className?: string 
             <input
               type="tel"
               value={formData.phone}
-              onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+              onChange={(e) => handleInputChange('phone', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.PhonePlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -222,9 +313,10 @@ export default function VolunteerInternship({ className }: { className?: string 
             <input
               type="text"
               value={formData.education}
-              onChange={(e) => setFormData(prev => ({ ...prev, education: e.target.value }))}
+              onChange={(e) => handleInputChange('education', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.EducationPlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -235,9 +327,10 @@ export default function VolunteerInternship({ className }: { className?: string 
             <textarea
               rows={3}
               value={formData.experience}
-              onChange={(e) => setFormData(prev => ({ ...prev, experience: e.target.value }))}
+              onChange={(e) => handleInputChange('experience', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background resize-none"
               placeholder={tModal('Form.ExperiencePlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -248,9 +341,10 @@ export default function VolunteerInternship({ className }: { className?: string 
             <input
               type="text"
               value={formData.availability}
-              onChange={(e) => setFormData(prev => ({ ...prev, availability: e.target.value }))}
+              onChange={(e) => handleInputChange('availability', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
               placeholder={tModal('Form.AvailabilityPlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
@@ -262,17 +356,26 @@ export default function VolunteerInternship({ className }: { className?: string 
               rows={4}
               required
               value={formData.motivation}
-              onChange={(e) => setFormData(prev => ({ ...prev, motivation: e.target.value }))}
+              onChange={(e) => handleInputChange('motivation', e.target.value)}
               className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-background resize-none"
               placeholder={tModal('Form.MotivationPlaceholder')}
+              disabled={isSubmitting}
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+            disabled={isSubmitting}
+            className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
-            {tModal('Form.Submit')}
+            {isSubmitting ? (
+              <>
+                <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                {tModal('Form.Submitting')}
+              </>
+            ) : (
+              tModal('Form.Submit')
+            )}
           </button>
         </form>
       </ApplicationModal>

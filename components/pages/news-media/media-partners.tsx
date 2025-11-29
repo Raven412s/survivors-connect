@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { Video, Users, MapPin, Calendar, Award } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 export default function MediaPartners({ className }: { className?: string }) {
   const t = useTranslations('NewsMedia.Media-Partners');
@@ -35,8 +36,8 @@ export default function MediaPartners({ className }: { className?: string }) {
             <div className="bg-card border border-border rounded-2xl p-8">
               {/* Logo and Basic Info */}
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
-                  <Video className="w-8 h-8 text-orange-600" />
+                <div className="w-16 h-16 bg-zinc-900 dark:bg-orange-900/30 rounded-xl relative  flex items-center justify-center">
+                  <Image src={'/images/assets/LOGO-VIACAM.svg'} alt="media partner logo" height={600} width={600} className="object-contain h-10 w-10" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-foreground">{t('Viacam.Title')}</h3>

@@ -667,7 +667,8 @@
           "ExperiencePlaceholder": "Number of years",
           "Motivation": "Why do you want to join our network?",
           "MotivationPlaceholder": "Tell us about your motivation and how you can contribute...",
-          "Submit": "Submit Application"
+          "Submit": "Submit Application",
+          "Submitting": "Submitting Application"
         },
         "Professions": {
           "Lawyer": "Lawyer",
@@ -697,7 +698,8 @@
           "AvailabilityPlaceholder": "e.g., Weekends, 10-15 hours per week",
           "Motivation": "Why are you interested in this opportunity?",
           "MotivationPlaceholder": "Tell us about your motivation and what you hope to achieve...",
-          "Submit": "Submit Application"
+          "Submit": "Submit Application",
+          "Submitting": "Submitting Application"
         }
       },
       "LeadershipProgram": {

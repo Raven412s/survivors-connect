@@ -5,6 +5,7 @@ import "../../globals.css";
 import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { Toaster } from '@/components/ui/sonner';
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -36,10 +37,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     return (
         <html lang={locale} >
             <body
-            suppressHydrationWarning
+                suppressHydrationWarning
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <Providers locale={locale}>{children}</Providers>
+                <Providers locale={locale}>
+                    <Toaster closeButton position='top-right' richColors />
+                    {children}
+                </Providers>
             </body>
         </html>
     )
