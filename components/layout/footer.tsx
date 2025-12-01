@@ -73,7 +73,7 @@ export function Footer() {
     {
       icon: Mail,
       text: t("Email"),
-      subtext: "support@survivorconnect.org",
+      subtext: "pvchr.india@gmail.com",
     },
     {
       icon: MapPin,
