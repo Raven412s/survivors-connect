@@ -30,7 +30,7 @@ export default function Navbar() {
         {/* Logo Section (now left on all screens) */}
         <div className="flex items-center gap-1 md:gap-2">
           <div className="text-base md:text-xl font-bold p-1 flex gap-1 md:gap-2 items-center">
-            <div className=" relative size-7 md:size-10 lg:size-14" >
+            <div className=" relative size-7 md:size-10 lg:size-14 flex items-center justify-center" >
               <Image
                 height={1000}
                 width={1000}

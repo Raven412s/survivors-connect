@@ -102,7 +102,7 @@ export function Footer() {
               <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <div className="flex items-center gap-1 md:gap-2">
                   <div className="text-base md:text-xl font-bold p-1 flex gap-1 md:gap-2 items-center">
-                    <div className=" relative size-7 md:size-10 lg:size-14" >
+                    <div className=" relative aspect-3/2 w-56" >
                       <Image
                       
                       height={1000}
@@ -111,12 +111,6 @@ export function Footer() {
                       src="/logo.png"
                       className="object-cover"
                       />
-                    </div>
-                    <div className="flex flex-col items-start justify-center gap-0.5 md:gap-1">
-                      <h1 className="uppercase leading-tight">{tNavbar("Firm-Name-1")}</h1>
-                      <h1 className="uppercase leading-tight text-muted-foreground text-xs md:text-sm">
-                        {tNavbar("Firm-Name-2")}
-                      </h1>
                     </div>
                   </div>
                 </div>
