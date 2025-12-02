@@ -11,7 +11,8 @@ import {
   Youtube,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  LinkedinIcon
 } from "lucide-react";
 import SafeExitButton from "../buttons/safe-exit";
 import MoveToTopButton from "../buttons/move-to-top-button";
@@ -44,18 +45,23 @@ export function Footer() {
 
   const socialLinks = [
     {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/pvchr/",
+      icon: LinkedinIcon,
+    },
+    {
       name: "Facebook",
-      href: "https://facebook.com/survivorconnect",
+      href: "https://www.facebook.com/pvchr/",
       icon: Facebook,
     },
     {
       name: "Twitter",
-      href: "https://twitter.com/survivorconnect",
+      href: "https://x.com/pvchr",
       icon: Twitter,
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/survivorconnect",
+      href: "https://www.instagram.com/pvchr96/",
       icon: Instagram,
     },
     {

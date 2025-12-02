@@ -1,6 +1,12 @@
 // components/pages/resources/index.tsx
 'use client';
-
+  // Social Media Connections
+ import { 
+  LinkedinIcon,
+  Facebook,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from 'next-intl';
 import { 
@@ -122,30 +128,46 @@ export default function ResourcesPage({ className }: { className?: string }) {
     }
   ];
 
-  // Social Media Connections
-  const socialMediaLinks = [
-    {
-      icon: Globe,
-      name: "Facebook",
-      url: "https://facebook.com/survivorconnect",
-      description: "Follow us for updates, events, and community stories.",
-      platform: "Facebook"
-    },
-    {
-      icon: Globe,
-      name: "Twitter",
-      url: "https://twitter.com/survivorconnect",
-      description: "Real-time updates on advocacy, research, and survivor support.",
-      platform: "Twitter"
-    },
-    {
-      icon: Globe,
-      name: "Instagram",
-      url: "https://instagram.com/survivorconnect",
-      description: "Visual stories, awareness campaigns, and community highlights.",
-      platform: "Instagram"
-    }
-  ];
+
+
+const socialMediaLinks = [
+  {
+    icon: LinkedinIcon,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/pvchr/",
+    description: "Professional updates, achievements, and organizational initiatives.",
+    platform: "LinkedIn"
+  },
+  {
+    icon: Facebook,
+    name: "Facebook",
+    url: "https://www.facebook.com/pvchr/",
+    description: "Follow us for updates, events, and community engagement posts.",
+    platform: "Facebook"
+  },
+  {
+    icon: Twitter,
+    name: "Twitter",
+    url: "https://x.com/pvchr",
+    description: "Real-time updates on advocacy, awareness, and human rights initiatives.",
+    platform: "Twitter"
+  },
+  {
+    icon: Instagram,
+    name: "Instagram",
+    url: "https://www.instagram.com/pvchr96/",
+    description: "Visual stories, campaigns, and community highlights.",
+    platform: "Instagram"
+  },
+  {
+    icon: Youtube,
+    name: "YouTube",
+    url: "https://www.youtube.com/user/pvchrindia",
+    description: "Watch speeches, interviews, campaigns, and awareness videos.",
+    platform: "YouTube"
+  }
+];
+
 
   // Support Resources
   const supportResources = [
@@ -542,7 +564,6 @@ export default function ResourcesPage({ className }: { className?: string }) {
                 { label: "Survivor Connect", url: "https://survivorconnect.org" },
                 { label: "Jan Mitra Nyas", url: "https://janmitranyas.in/" },
                 { label: "PVCHR", url: "https://pvchr.asia/" },
-                { label: "Connect+ Platform", url: "http://empowersurvivor.com" }
               ].map((link, index) => (
                 <div
                   key={index}
