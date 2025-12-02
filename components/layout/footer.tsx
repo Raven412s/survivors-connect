@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import SafeExitButton from "../buttons/safe-exit";
 import MoveToTopButton from "../buttons/move-to-top-button";
+import Image from "next/image";
 
 export function Footer() {
   const t = useTranslations("Footer");
@@ -68,7 +69,7 @@ export function Footer() {
     {
       icon: Phone,
       text: t("Emergency-Helpline"),
-      subtext: "24/7 Support",
+      subtext: "+919935599333",
     },
     {
       icon: Mail,
@@ -95,7 +96,16 @@ export function Footer() {
               <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <div className="flex items-center gap-1 md:gap-2">
                   <div className="text-base md:text-xl font-bold p-1 flex gap-1 md:gap-2 items-center">
-                    <div className="size-7 md:size-10 border-3 md:border-4 border-foreground" />
+                    <div className=" relative size-7 md:size-10 lg:size-14" >
+                      <Image
+                      
+                      height={1000}
+                      width={1000}
+                      alt="Logo"
+                      src="/logo.png"
+                      className="object-cover"
+                      />
+                    </div>
                     <div className="flex flex-col items-start justify-center gap-0.5 md:gap-1">
                       <h1 className="uppercase leading-tight">{tNavbar("Firm-Name-1")}</h1>
                       <h1 className="uppercase leading-tight text-muted-foreground text-xs md:text-sm">
@@ -213,7 +223,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border">
+      <div className="border-y border-border">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
@@ -245,6 +255,11 @@ export function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="">
+        <p className="text-center text-sm text-muted-foreground py-2.5">
+          {t("Developed-By")}
+        </p>
       </div>
     </footer>
   );

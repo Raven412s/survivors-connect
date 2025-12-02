@@ -39,10 +39,6 @@ export default function ContactResources({ className }: { className?: string }) 
       url: "https://pvchr.asia/"
     },
     {
-      name: t('Websites.ConnectPlus'),
-      url: "http://empowersurvivor.com"
-    },
-    {
       name: t('Websites.PVCHRBlog'),
       url: "https://pvchr.blogspot.com/"
     },

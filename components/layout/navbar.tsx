@@ -13,6 +13,7 @@ import Link from "next/link";
 import ToggleActions from "../action-blocks/navbar/ToggleActions";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 
 export default function Navbar() {
@@ -29,7 +30,15 @@ export default function Navbar() {
         {/* Logo Section (now left on all screens) */}
         <div className="flex items-center gap-1 md:gap-2">
           <div className="text-base md:text-xl font-bold p-1 flex gap-1 md:gap-2 items-center">
-            <div className="size-7 md:size-10 border-3 md:border-4 border-foreground" />
+            <div className=" relative size-7 md:size-10 lg:size-14" >
+              <Image
+                height={1000}
+                width={1000}
+                alt="Logo"
+                src="/logo.png"
+                className="object-cover"
+              />
+            </div>
             {/* <div className="size-7 md:size-10 border-3 md:border-4 border-foreground absolute rotate-[45deg] scale-[60%]" /> */}
             <div className="flex flex-col items-start justify-center gap-0.5 md:gap-1">
               <h1 className="uppercase leading-tight">{t("Logo.Firm-Name-1")}</h1>
@@ -83,7 +92,7 @@ export default function Navbar() {
                   { href: "/research-publications", label: `${tLinks("Research-And-Publications")}` },
                   { href: "/news-media", label: `${tLinks("News-And-Media")}` },
                   { href: "/resources", label: `${tLinks("Resources")}` },
-                  { href: "https://janmitranyas.in/report.html", label: `${tLinks("Comprehensive-Report")}`},
+                  { href: "https://janmitranyas.in/report.html", label: `${tLinks("Comprehensive-Report")}` },
                 ].map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
@@ -107,7 +116,7 @@ export default function Navbar() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button
-                  variant="outline" 
+                  variant="outline"
                   size="icon-sm"
                 >
                   <Menu className="size-4" />
